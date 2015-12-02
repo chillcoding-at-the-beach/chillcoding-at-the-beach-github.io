@@ -1,0 +1,15 @@
+# Site settings
+title: "ChillCoding"
+email: "contact@chillcoding.com"
+description: > # this means to ignore newlines until "baseurl:"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.chillcoding.com" # the base hostname & protocol for your site
+
+twitter_usernames:
+  company: chillcodingnews
+  remy: rymai
+  macha: machaDaCosta
+github_username: chillcoding-at-the-beach
+
+# Build settings
+markdown: kramdown
