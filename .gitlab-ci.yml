@@ -2,11 +2,11 @@ pages:
   stage: deploy
   image: ruby:2.1
   script:
-  - gem install jekyll
-  - gem install redcarpet
-  - jekyll build -d public
+    - gem install bundler --no-ri --no-rdoc
+    - bundle install --jobs $(nproc)
+    - bundle exec jekyll build -d public
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master
