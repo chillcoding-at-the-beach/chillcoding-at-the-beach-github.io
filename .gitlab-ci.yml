@@ -1,11 +1,13 @@
+image: ruby:2.1
+
+# jekyll-coffeescript need a JS runtime...
+before_script:
+  - sudo apt-get install nodejs
+  - gem install bundler --no-ri --no-rdoc
+  - bundle install --jobs $(nproc)
+
 pages:
   stage: deploy
-  image: ruby:2.1
-  # jekyll-coffeescript need a JS runtime...
-  before_script:
-    - sudo apt-get install nodejs
-    - gem install bundler --no-ri --no-rdoc
-    - bundle install --jobs $(nproc)
   script:
     - bundle exec jekyll build -d public
   artifacts:
