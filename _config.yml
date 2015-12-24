@@ -13,3 +13,5 @@ github_username: chillcoding-at-the-beach
 
 # Build settings
 markdown: kramdown
+
+exclude: [Gemfile, Gemfile.lock, README.md]
