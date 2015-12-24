@@ -4,7 +4,7 @@ image: ruby:2.1
 before_script:
   - apt-get update
   - apt-get upgrade -y
-  - apt-get install nodejs
+  - apt-get install nodejs -y
   - gem install bundler --no-ri --no-rdoc
   - bundle install --jobs $(nproc)
 
