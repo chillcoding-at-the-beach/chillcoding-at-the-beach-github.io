@@ -12,6 +12,6 @@ twitter_usernames:
 github_username: chillcoding-at-the-beach
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 
 exclude: [Gemfile, Gemfile.lock, README.md]
