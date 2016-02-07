@@ -14,3 +14,5 @@ github_username: chillcoding-at-the-beach
 
 # Build settings
 exclude: [Gemfile, Gemfile.lock, README.md]
+gems:
+  - jekyll-sitemap
