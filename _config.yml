@@ -1,6 +1,9 @@
 # Site settings
 title: "ChillCoding"
-email: "contact@chillcoding.com"
+emails: 
+  company: "contact@chillcoding.com"
+  macha: "macha@chillcoding.com"
+  remy: "remy@chillcoding.com"
 description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.chillcoding.com" # the base hostname & protocol for your site
@@ -10,7 +13,13 @@ twitter_usernames:
   company: chillcodingnews
   remy: rymai
   macha: machaDaCosta
-github_username: chillcoding-at-the-beach
+github_usernames: 
+  company: chillcoding-at-the-beach
+  remy: rymai
+  macha: machadaCosta
+usernames:
+  remy: Remy Coutable
+  macha: Macha Da Costa
 
 # Build settings
 exclude: [Gemfile, Gemfile.lock, README.md]
