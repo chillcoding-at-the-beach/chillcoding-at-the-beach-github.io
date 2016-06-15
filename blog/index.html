@@ -1,0 +1,7 @@
+---
+layout: blog
+---
+
+{% for page in paginator.posts %}
+  {% include post-content.html context='home' %}
+{% endfor %}

@@ -6,7 +6,12 @@ emails:
   remy: "remy@chillcoding.com"
 description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.chillcoding.com" # the base hostname & protocol for your site
+url: "https://www.chillcoding.com" # the base hostname & protocol for your site
+
+# Blog
+permalink: /blog/:year/:month/:day/:title/
+paginate: 5
+paginate_path: ':num'
 
 google_analytics_id: UA-55688141-5
 twitter_usernames:
@@ -25,7 +30,14 @@ usernames:
   remy: Rémy Coutable
   macha: Macha Da Costa
 
-# Build settings
-exclude: [Gemfile, Gemfile.lock, README.md]
+# Build settings, exclude vendor (this is where Gems are installed during CI build)
+exclude: [CNAME, Gemfile, Gemfile.lock, README.md]
 gems:
+  - jekyll-feed
+  - jekyll-paginate
   - jekyll-sitemap
+# These are the default on GitHub Pages:
+# https://help.github.com/articles/configuring-jekyll/#defaults-you-can-change
+kramdown:
+  input: GFM
+  hard_wrap: false
