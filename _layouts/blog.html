@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+
+  <body class="blog">
+    {% include nav.html context='blog' %}
+    <section class="content container blog home">
+      <div class="four-fifths center-on-mobiles">
+        {{ content }}
+      </div>
+    </section>
+    {% include scripts.html %}
+    {% include analytics.html %}
+  </body>
+</html>
