@@ -23,6 +23,7 @@ a {
     color: $theme-primary;
     &:hover,
     &:focus {
+        text-decoration: none;
         color: darken($theme-primary, 10%);
     }
 }

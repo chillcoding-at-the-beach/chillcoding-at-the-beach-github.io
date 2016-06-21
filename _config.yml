@@ -1,7 +1,7 @@
 # Site settings
 title: "ChillCoding"
-emails: 
-  company: "contact@chillcoding.com"
+emails:
+  company: "hello@chillcoding.com"
   macha: "macha@chillcoding.com"
   remy: "remy@chillcoding.com"
 description: > # this means to ignore newlines until "baseurl:"
@@ -13,12 +13,16 @@ twitter_usernames:
   company: chillcodingnews
   remy: rymai
   macha: machaDaCosta
-github_usernames: 
+github_usernames:
   company: chillcoding-at-the-beach
   remy: rymai
   macha: machadaCosta
+gitlab_usernames:
+  company: chillcoding-at-the-beach
+  remy: rymai
+  macha: macha
 usernames:
-  remy: Remy Coutable
+  remy: Rémy Coutable
   macha: Macha Da Costa
 
 # Build settings
