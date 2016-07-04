@@ -26,6 +26,6 @@ usernames:
   macha: Macha Da Costa
 
 # Build settings
-exclude: [Gemfile, Gemfile.lock, README.md]
+exclude: [Gemfile, Gemfile.lock, README.md, bachamada/README.md, bachamada/gruntfile.js, bachamada/package.json]
 gems:
   - jekyll-sitemap
