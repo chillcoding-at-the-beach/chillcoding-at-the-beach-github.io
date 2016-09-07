@@ -1,0 +1,26 @@
+company:
+  name: ChillCoding
+  twitter: chillcodingnews
+  github: chillcoding-at-the-beach
+  gitlab: chillcoding-at-the-beach
+  linkedin: chillcoding
+  email: hello@chillcoding.com
+  website: https://www.chillcoding.com
+
+macha:
+  name: Macha Da Costa
+  twitter: machaDaCosta
+  github: machadaCosta
+  gitlab: macha
+  linkedin: MachaDaCosta
+  email: macha@chillcoding.com
+  website: http://www.machada.io
+
+remy:
+  name: Rémy Coutable
+  twitter: rymai
+  github: rymai
+  gitlab: rymai
+  linkedin: rymai
+  email: remy@chillcoding.com
+  website: https://www.rymai.me

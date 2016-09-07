@@ -1,1 +1,1 @@
-bundle install && bundle exec jekyll serve -w -D -V --profile
+bundle install && bundle exec jekyll serve --watch --future --drafts --verbose --incremental --profile --trace
