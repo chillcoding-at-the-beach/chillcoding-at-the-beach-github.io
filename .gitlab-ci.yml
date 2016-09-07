@@ -10,6 +10,7 @@ before_script:
 
 pages:
   stage: deploy
+  environment: production
   script:
     - bundle exec jekyll build -d public
   artifacts:
