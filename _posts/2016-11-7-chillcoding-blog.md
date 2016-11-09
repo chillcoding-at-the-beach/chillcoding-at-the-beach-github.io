@@ -1,6 +1,6 @@
 ---
 title: "Blog de ChillCoding"
-category: chill
+category: chillcoding
 ---
 
 ![Chemin vers la plage](/img/post/sail-away-beach.jpg)
@@ -30,5 +30,5 @@ A venir : des articles sur nos conditions réelles de travail (quand Macha ne pr
 ses cours à la plage, elle apprécie voir cette dernière depuis <a href='http://www.coolwork.io/'>CoolWork</a>).
 
 
-Finalement, le chemin vers la plage n'est pas très loin alors à bientôt pour de
+Finalement, le chemin vers la plage n'est plus très loin alors à bientôt pour de
 nouveaux articles 'Chill' ou 'Coding'.
