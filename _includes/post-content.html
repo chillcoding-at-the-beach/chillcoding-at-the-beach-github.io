@@ -14,7 +14,7 @@
   </div>
   <div class="post-content">
     {% if include.context == 'home' %}
-      <div class="excerpt lead">{{ page.excerpt | markdownify }}</div>
+      <div class="excerpt lead"> <a href="{{ page.url }}" class="permalink" title="Permalink">{{ page.excerpt | markdownify }}</a></div>
     {% else %}
       {{ page.content | markdownify }}
     {% endif %}
