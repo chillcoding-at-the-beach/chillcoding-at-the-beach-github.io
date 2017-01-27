@@ -5,26 +5,26 @@ category: coding
 
 ![Android Tools](/img/post/android-config.png)
 
-There are so many Android ressources out there, it's hard to know the ones that are essential.
+There are so many Android resources out there, it's hard to know the ones that are essential.
 Here are the best references I have selected in terms of: 
 
-<i class="fa fa-th" aria-hidden="true"></i> Applications
+[<i class="fa fa-th" aria-hidden="true"></i> Applications](#app)
 
-<i class="fa fa-tags" aria-hidden="true"></i> Libraries
+[<i class="fa fa-tags" aria-hidden="true"></i> Libraries](#lib)
 
-<i class="fa fa-users" aria-hidden="true"></i> Influencers to Follow
+[<i class="fa fa-users" aria-hidden="true"></i> Influencers to Follow](#people)
 
-<i class="fa fa-list" aria-hidden="true"></i> Awesome List
+[<i class="fa fa-list" aria-hidden="true"></i> Awesome List](#list)
 
-<i class="fa fa-globe" aria-hidden="true"></i> Blogs
+[<i class="fa fa-globe" aria-hidden="true"></i> Blogs](#blogs)
 
-<i class="fa fa-android" aria-hidden="true"></i> Groups
+[<i class="fa fa-android" aria-hidden="true"></i> Groups](#grroups)
 
-<i class="fa fa-bullhorn" aria-hidden="true"></i> Conferences
+[<i class="fa fa-bullhorn" aria-hidden="true"></i> Conferences](#conf)
 
 As an Android Developer, you have to know all these references.
 
-## <i class="fa fa-th" aria-hidden="true"></i> Applications
+## <a name="app"></a><i class="fa fa-th" aria-hidden="true"></i> Applications
 
 <i class="fa fa-th-large" aria-hiden="true"></i> [UI Design for Android](https://play.google.com/store/apps/details?id=com.boopathy.raja.tutorial) Don't miss the awesome Wheel demo
 
@@ -32,8 +32,7 @@ As an Android Developer, you have to know all these references.
 
 <i class="fa fa-globe" aria-hidden="true"></i> Want more? Checkout this [list of Android Applications](http://www.techrepublic.com/pictures/gallery-10-android-apps-every-new-mobile-developer-needs-in-their-toolbox/)
 
-
-## <i class="fa fa-tags" aria-hidden="true"></i> Libraries
+## <a name="lib"></a><i class="fa fa-tags" aria-hidden="true"></i> Libraries
 <i class="fa fa-tag" aria-hidden="true"></i> [Retrofit](https://github.com/codepath/android_guides/wiki/Consuming-APIs-with-Retrofit)
 
 <i class="fa fa-tag" aria-hidden="true"></i> [EventBus](https://github.com/greenrobot/EventBus)
@@ -44,8 +43,7 @@ As an Android Developer, you have to know all these references.
 
 <i class="fa fa-globe" aria-hidden="true"></i> Want more? Checkout [Must Have Libraries](https://github.com/codepath/android_guides/wiki/Must-Have-Libraries)
 
-
-## <i class="fa fa-users" aria-hidden="true"></i> Influencers to Follow
+## <a name="people"></a><i class="fa fa-users" aria-hidden="true"></i> Influencers to Follow 
 
 <i class="fa fa-user" aria-hidden="true"></i> [Roman Nurik on <i class="fa fa-twitter" aria-hidden="true"></i>](https://twitter.com/romannurik) Designer at Google and an Android developer
 
@@ -55,41 +53,35 @@ As an Android Developer, you have to know all these references.
 
 <i class="fa fa-user" aria-hidden="true"></i> [Cyril Motier on <i class="fa fa-twitter" aria-hidden="true"></i>](https://twitter.com/cyrilmottier) Mobile Product Devsigner & Android expert
 
-<i class="fa fa-user" aria-hidden="true"></i> [Mathias Seguy](http://mathias-seguy.developpez.com/) Expert et Formateur Android 
+<i class="fa fa-user" aria-hidden="true"></i> [Mathias Seguy (FR)](http://mathias-seguy.developpez.com/) Expert et Formateur Android 
 
 <i class="fa fa-globe" aria-hidden="true"></i> Want more? Checkout this [list of Influencers](blog.instabug.com/2015/11/37-influencers-follow-youre-android-developer/)
 
+## <a name="list"></a><i class="fa fa-list" aria-hidden="true"></i> Awesome List 
 
-
-## <i class="fa fa-list" aria-hidden="true"></i> Awesome List
 <i class="fa fa-list-ul" aria-hidden="true"></i> [Awesome Android UI](https://github.com/wasabeef/awesome-android-ui)
 
 <i class="fa fa-list-ul" aria-hidden="true"></i> [Awesome Android](https://github.com/JStumpp/awesome-android)
 
+## <a name="blogs"></a><i class="fa fa-globe" aria-hidden="true"></i> Blogs
 
-
-## <i class="fa fa-globe" aria-hidden="true"></i> Blogs
-
-<i class="fa fa-globe" aria-hidden="true"></i> [Human Coders News](http://news.humancoders.com/)
+<i class="fa fa-globe" aria-hidden="true"></i> [Human Coders News (FR)](http://news.humancoders.com/)
 
 <i class="fa fa-globe" aria-hidden="true"></i>  [Android Arsenal](https://android-arsenal.com/)
 
 <i class="fa fa-globe" aria-hidden="true"></i>  [Android Weekly](http://androidweekly.net/)
 
-<i class="fa fa-globe" aria-hidden="true"></i> [Zeste de savoir](https://zestedesavoir.com/contenus/?tag=android)
+<i class="fa fa-globe" aria-hidden="true"></i> [Zeste de savoir (FR)](https://zestedesavoir.com/contenus/?tag=android)
 
-
-
-## <i class="fa fa-android" aria-hidden="true"></i> Groups
+## <a name="groups"></a><i class="fa fa-android" aria-hidden="true"></i> Groups
 
 <i class="fa fa-slack" aria-hidden="true"></i> [Android United on Slack](android-united.slack.com)
 
-<i class="fa fa-globe" aria-hidden="true"></i> [Paris Android User Group](http://www.paug.fr/)
+<i class="fa fa-globe" aria-hidden="true"></i> [Paris Android User Group (FR)](http://www.paug.fr/)
 
 <i class="fa fa-twitter" aria-hidden="true"></i> [Material Up](https://twitter.com/MaterialUp)
 
-
-## <i class="fa fa-bullhorn" aria-hidden="true"></i> Conferences
+## <a name="conf"></a><i class="fa fa-bullhorn" aria-hidden="true"></i> Conferences
 
 <i class="fa fa-bullhorn" aria-hidden="true"></i> [Google IO](https://events.google.com/io/)
 
@@ -97,8 +89,7 @@ As an Android Developer, you have to know all these references.
 
 <i class="fa fa-bullhorn" aria-hidden="true"></i> [Devoxx](http://devoxx.fr/)
 
-[Share] or [react] on Twitter.
 
-Have other awesome reference? Don't hesitate to open a [merge-request].
+
 
 
