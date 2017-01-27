@@ -10,6 +10,7 @@ paginate: 5
 paginate_path: "/blog/page-:num/"
 
 google_analytics_id: UA-55688141-5
+repository_url: https://gitlab.com/chillcoding-at-the-beach/chillcoding-at-the-beach.gitlab.io/
 
 # Build settings, exclude vendor (this is where Gems are installed during CI build)
 exclude: [CNAME, Gemfile, Gemfile.lock, README.md, serve, bachamada/README.md, bachamada/gruntfile.js, bachamada/package.json]
