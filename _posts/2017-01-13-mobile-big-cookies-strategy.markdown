@@ -1,6 +1,7 @@
 ---
 title:  "Big Cookie Strategy"
 category: coding
+author: machadacosta
 ---
 
 ![Big Cookie Strategy in Mobile Development](/img/post/mobile-server.png)
