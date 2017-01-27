@@ -1,6 +1,7 @@
 ---
 title: "Android References"
 category: coding
+author: machadacosta
 ---
 
 ![Android Tools](/img/post/android-config.png)
