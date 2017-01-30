@@ -6,7 +6,7 @@ author: machadacosta
 
 ![Big Cookie Strategy in Mobile Development](/img/post/mobile-server.png)
 
-This post is about the Big Cookie Strategy in particular the Big Cookie Model. The goal is to optimise exchange between a server and a mobile application. It's has been elaborated based on real life study case, far away of perfect development context where connectivity is of very high quality.
+This post is about the Big Cookie Strategy in particular the Big Cookie Model. The goal is to optimise exchange between a server and a mobile application. It has been elaborated based on real life study case, far away of perfect development context where connectivity is of very high quality.
 
 ## What is Big Cookie Strategy?
 
@@ -20,7 +20,7 @@ Step by step:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-server" aria-hiden="true"></i> Server sends prefetch data depending on the connectivity: <i class="fa fa-database" aria-hiden="true"></i> ( <i class="fa fa-wifi" aria-hiden="true"> | 3G | </i> <i class="fa fa-signal" aria-hiden="true"></i> )
 
-The tricks resides in the fact that the size of data set sent by the server depends on the connectivity state of the mobile device.
+The trick resides in the fact that the size of data set sent by the server depends on the connectivity state of the mobile device.
 For instance, following are different data set depending on the connectivity:
 
 | Connectivity | Example of Data Set |
