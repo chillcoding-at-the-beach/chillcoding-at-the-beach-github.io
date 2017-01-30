@@ -68,9 +68,9 @@ As an Android Developer, you have to know all these references.
 
 <i class="fa fa-globe" aria-hidden="true"></i> [Human Coders News (FR)](http://news.humancoders.com/)
 
-<i class="fa fa-globe" aria-hidden="true"></i>  [Android Arsenal](https://android-arsenal.com/)
+<i class="fa fa-globe" aria-hidden="true"></i> [Android Arsenal](https://android-arsenal.com/)
 
-<i class="fa fa-globe" aria-hidden="true"></i>  [Android Weekly](http://androidweekly.net/)
+<i class="fa fa-globe" aria-hidden="true"></i> [Android Weekly](http://androidweekly.net/)
 
 <i class="fa fa-globe" aria-hidden="true"></i> [Zeste de savoir (FR)](https://zestedesavoir.com/contenus/?tag=android)
 
