@@ -1,6 +1,7 @@
 ---
 title: "Android UI Cheatsheet"
 category: coding
+author: machadacosta
 ---
 
 ![Android View](/img/post/android-view.png)

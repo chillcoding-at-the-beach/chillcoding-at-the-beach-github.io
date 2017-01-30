@@ -1,6 +1,7 @@
 ---
 title: "Formation Android"
 category: chillcoding
+author: machadacosta
 ---
 
 ![Android View](/img/post/android-formation.png)

@@ -1,6 +1,7 @@
 ---
 title: "Blog de ChillCoding"
 category: chillcoding
+author: machadacosta
 ---
 
 ![Chemin vers la plage](/img/post/sail-away-beach.jpg)

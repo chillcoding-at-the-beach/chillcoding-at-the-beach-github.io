@@ -76,7 +76,7 @@ As an Android Developer, you have to know all these references.
 
 ## <a name="groups"></a><i class="fa fa-android" aria-hidden="true"></i> Groups
 
-<i class="fa fa-slack" aria-hidden="true"></i> [Android United on Slack](android-united.slack.com)
+<i class="fa fa-slack" aria-hidden="true"></i> [Android United on Slack](http://android-united.community/)
 
 <i class="fa fa-globe" aria-hidden="true"></i> [Paris Android User Group (FR)](http://www.paug.fr/)
 
