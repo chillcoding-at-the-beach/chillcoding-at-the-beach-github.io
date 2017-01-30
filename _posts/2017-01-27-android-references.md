@@ -19,7 +19,7 @@ Here are the best references I have selected in terms of:
 
 [<i class="fa fa-globe" aria-hidden="true"></i> Blogs](#blogs)
 
-[<i class="fa fa-android" aria-hidden="true"></i> Groups](#grroups)
+[<i class="fa fa-android" aria-hidden="true"></i> Groups](#groups)
 
 [<i class="fa fa-bullhorn" aria-hidden="true"></i> Conferences](#conf)
 
@@ -89,8 +89,3 @@ As an Android Developer, you have to know all these references.
 <i class="fa fa-bullhorn" aria-hidden="true"></i> [Droidcon](http://droidcon.com/)
 
 <i class="fa fa-bullhorn" aria-hidden="true"></i> [Devoxx](http://devoxx.fr/)
-
-
-
-
-
