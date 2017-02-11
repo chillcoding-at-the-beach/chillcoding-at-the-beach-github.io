@@ -1,12 +1,15 @@
 image: ruby:2.3
 
+variables:
+  JEKYLL_ENV: gitlab
+
 # jekyll-coffeescript need a JS runtime...
 before_script:
   - apt-get update
   - apt-get upgrade -y
   - apt-get install nodejs -y
   - gem install bundler --no-ri --no-rdoc
-  - bundle install --jobs $(nproc)
+  - bundle install --jobs $(nproc) --deployment --without development --full-index
 
 pages:
   stage: deploy
