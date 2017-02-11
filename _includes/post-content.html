@@ -18,7 +18,11 @@
     {% else %}
       {{ page.content | markdownify }}
     {% endif %}
-     <p><a href='https://twitter.com/intent/tweet?text="{{ page.title }}"&via={{ page.author }}&url={{ site.root_url }}{{ page.url }}' target="_blank">Share</a> or <a href="https://twitter.com/intent/tweet?text=@{{ page.author }} &url={{ site.root_url }}{{ page.url }}" target="_blank">React</a> on Twitter.</p>
-        <p><em>Have a comment? Open a <a href="{{ site.repository_url }}/edit/master/{{ page.path }}" target="_blank">merge-request</a>!</em></p>
+    <p>
+      <a href='https://twitter.com/intent/tweet?text="{{ page.title }}"&via={{ page.author }}&url={{ site.root_url }}{{ page.url }}' target="_blank">Share</a> or <a href="https://twitter.com/intent/tweet?text=@{{ page.author }} &url={{ site.root_url }}{{ page.url }}" target="_blank">React</a> on Twitter.
+    </p>
+    <p>
+      <em>Have a comment? Open a <a href="{{ site.repository_url }}/edit/master/{{ page.path }}" target="_blank">merge request</a>!</em>
+    </p>
   </div>
 </article>
