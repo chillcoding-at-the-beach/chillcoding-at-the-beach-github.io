@@ -14,15 +14,16 @@ google_analytics_id: UA-55688141-5
 
 # Build settings, exclude vendor (this is where Gems are installed during CI build)
 exclude:
+  - bachamada/assets/less/
   - bachamada/README.md
   - bachamada/gruntfile.js
   - bachamada/package.json
+  - bin/
   - CNAME
   - Gemfile
   - Gemfile.lock
   - README.md
-  - serve
-  - vendor
+  - vendor/
 
 gems:
   - jekyll-feed

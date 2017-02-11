@@ -4,10 +4,10 @@ category: coding
 author: machadacosta
 ---
 
-![Android Tools](/img/post/android-config.png)
+![Android Tools](/assets/img/post/android-config.png)
 
 There are so many Android resources out there, it's hard to know the ones that are essential.
-Here are the best references I have selected in terms of: 
+Here are the best references I have selected in terms of:
 
 [<i class="fa fa-th" aria-hidden="true"></i> Applications](#app)
 
@@ -44,7 +44,7 @@ As an Android Developer, you have to know all these references.
 
 <i class="fa fa-globe" aria-hidden="true"></i> Want more? Checkout [Must Have Libraries](https://github.com/codepath/android_guides/wiki/Must-Have-Libraries)
 
-## <a name="people"></a><i class="fa fa-users" aria-hidden="true"></i> Influencers to Follow 
+## <a name="people"></a><i class="fa fa-users" aria-hidden="true"></i> Influencers to Follow
 
 <i class="fa fa-user" aria-hidden="true"></i> [Roman Nurik on <i class="fa fa-twitter" aria-hidden="true"></i>](https://twitter.com/romannurik) Designer at Google and an Android developer
 
@@ -54,11 +54,11 @@ As an Android Developer, you have to know all these references.
 
 <i class="fa fa-user" aria-hidden="true"></i> [Cyril Motier on <i class="fa fa-twitter" aria-hidden="true"></i>](https://twitter.com/cyrilmottier) Mobile Product Devsigner & Android expert
 
-<i class="fa fa-user" aria-hidden="true"></i> [Mathias Seguy (FR)](http://mathias-seguy.developpez.com/) Expert et Formateur Android 
+<i class="fa fa-user" aria-hidden="true"></i> [Mathias Seguy (FR)](http://mathias-seguy.developpez.com/) Expert et Formateur Android
 
 <i class="fa fa-globe" aria-hidden="true"></i> Want more? Checkout this [list of Influencers](blog.instabug.com/2015/11/37-influencers-follow-youre-android-developer/)
 
-## <a name="list"></a><i class="fa fa-list" aria-hidden="true"></i> Awesome List 
+## <a name="list"></a><i class="fa fa-list" aria-hidden="true"></i> Awesome List
 
 <i class="fa fa-list-ul" aria-hidden="true"></i> [Awesome Android UI](https://github.com/wasabeef/awesome-android-ui)
 
