@@ -24,6 +24,9 @@ build:
   stage: build
   script:
     - bundle exec jekyll build -d ./.public
+  artifacts:
+    paths:
+      - ./.public
 
 pages:
   stage: pages
@@ -32,6 +35,6 @@ pages:
     - mv ./.public ./public
   artifacts:
     paths:
-      - public
+      - ./public
   only:
     - master
