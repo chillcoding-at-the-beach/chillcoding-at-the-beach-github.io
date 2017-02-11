@@ -2,5 +2,5 @@
 
 Serve the site:
 ```
-./serve
+bin/serve
 ```

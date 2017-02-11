@@ -4,12 +4,12 @@ category: chillcoding
 author: machadacosta
 ---
 
-![Android View](/img/post/android-formation.png)
+![Android View](/assets/img/post/android-formation.png)
 
-Cette formation en développement Android s’adresse aux développeurs ayant déjà une connaissance de la programmation orientée objet, plus spécifiquement Java. En particulier, elle s’adresse aux personnes souhaitant se lancer dans le développement d’applications mobiles sur Android. 
+Cette formation en développement Android s’adresse aux développeurs ayant déjà une connaissance de la programmation orientée objet, plus spécifiquement Java. En particulier, elle s’adresse aux personnes souhaitant se lancer dans le développement d’applications mobiles sur Android.
 
-L’apprentissage se fait via des cours interactifs et des exercices pratiques, réalisés en langage Java sur Android Studio. 
-Tout au long des séances, afin d’augmenter sa productivité, il est indiqué des astuces pour utiliser au mieux les outils de développement (raccourcis clavier, auto-génération de codes, librairies, références, etc.). 
+L’apprentissage se fait via des cours interactifs et des exercices pratiques, réalisés en langage Java sur Android Studio.
+Tout au long des séances, afin d’augmenter sa productivité, il est indiqué des astuces pour utiliser au mieux les outils de développement (raccourcis clavier, auto-génération de codes, librairies, références, etc.).
 De plus, les bonnes pratiques de développement seront mises en lumière.
 
 La formation est basée sur un tronc commun se déroulant sur 3 jours. Ensuite, des séances optionnelles peuvent être sélectionnées à la carte, et ainsi prolonger la formation en fonction des besoins.
@@ -46,7 +46,7 @@ Pré-requis :
 </ol>
 * Material Design
 
-#### Pratique : Interface utilisateur élaborée 
+#### Pratique : Interface utilisateur élaborée
 
 * Construction d’une interface avec un agencement élaboré
 * Mise en pratique de quelques composants graphiques

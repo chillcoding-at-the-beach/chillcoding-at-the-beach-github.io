@@ -4,13 +4,13 @@ category: coding
 author: machadacosta
 ---
 
-![Big Cookie Strategy in Mobile Development](/img/post/mobile-server.png)
+![Big Cookie Strategy in Mobile Development](/assets/img/post/mobile-server.png)
 
 This post is about the Big Cookie Strategy in particular the Big Cookie Model. The goal is to optimise exchange between a server and a mobile application. It has been elaborated based on real life study case, far away of perfect development context where connectivity is of very high quality.
 
 ## What is Big Cookie Strategy?
 
-![Big Cookie Strategy in Mobile Development](/img/post/big-cookie-strategy.png)
+![Big Cookie Strategy in Mobile Development](/assets/img/post/big-cookie-strategy.png)
 
 Step by step:
 
@@ -27,7 +27,7 @@ For instance, following are different data set depending on the connectivity:
 | ------------ | ---------------- |
 | <i class="fa fa-signal" aria-hiden="true"></i> Edge | Info since one or two hours |
 | **3G** or 4G | Info since 3 days |
-| <i class="fa fa-wifi" aria-hiden="true"></i> Wifi | Info since 15 days | 
+| <i class="fa fa-wifi" aria-hiden="true"></i> Wifi | Info since 15 days |
 
 
 

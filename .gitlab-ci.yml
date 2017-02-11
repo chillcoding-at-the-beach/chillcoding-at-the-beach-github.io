@@ -4,9 +4,13 @@ variables:
   JEKYLL_ENV: gitlab
 
 cache:
-  key: "vendor"
+  key: "ruby-2.3"
   paths:
-  - vendor
+    - vendor/ruby
+
+stages:
+  - build
+  - pages
 
 # jekyll-coffeescript need a JS runtime...
 before_script:
@@ -16,10 +20,16 @@ before_script:
   - gem install bundler --no-ri --no-rdoc
   - bundle install --jobs $(nproc) --deployment --without development --full-index --retry 3 --clean
 
+build:
+  stage: build
+  script:
+    - bundle exec jekyll build -d ./.public
+
 pages:
+  stage: pages
   environment: production
   script:
-    - bundle exec jekyll build -d public
+    - mv ./.public ./public
   artifacts:
     paths:
       - public

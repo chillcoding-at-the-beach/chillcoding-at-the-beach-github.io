@@ -4,7 +4,7 @@ category: coding
 author: machadacosta
 ---
 
-![Android View](/img/post/android-view.png)
+![Android View](/assets/img/post/android-view.png)
 
 To create native UI in Android, here are some UI elements ordered by type with references.
 
@@ -82,4 +82,3 @@ To create native UI in Android, here are some UI elements ordered by type with r
 <i class="fa fa-tablet" aria-hidden="true"> </i> [Responsive UI](https://material.google.com/layout/responsive-ui.html)
 
 <i class="fa fa-paint-brush" aria-hidden="true"></i> [Material Icons](https://design.google.com/icons/index.html)
-

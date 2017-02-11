@@ -4,7 +4,7 @@ category: chillcoding
 author: machadacosta
 ---
 
-![Chemin vers la plage](/img/post/sail-away-beach.jpg)
+![Chemin vers la plage](/assets/img/post/sail-away-beach.jpg)
 
 Comme vous nous l'avez réclamé, nous vous présentons le blog de ChillCoding. Il
 a pour vocation de communiquer ouvertement sur ChillCoding, entre Chill et Coding.
