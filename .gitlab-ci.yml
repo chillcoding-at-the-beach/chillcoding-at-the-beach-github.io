@@ -3,6 +3,11 @@ image: ruby:2.3
 variables:
   JEKYLL_ENV: gitlab
 
+cache:
+  key: "vendor"
+  paths:
+  - vendor
+
 # jekyll-coffeescript need a JS runtime...
 before_script:
   - apt-get update
@@ -12,7 +17,6 @@ before_script:
   - bundle install --jobs $(nproc) --deployment --without development --full-index --retry 3 --clean
 
 pages:
-  stage: pages
   environment: production
   script:
     - bundle exec jekyll build -d public
@@ -21,10 +25,3 @@ pages:
       - public
   only:
     - master
-
-cache gems:
-  script:
-    - bundle package --all --all-platforms
-  artifacts:
-    paths:
-      - vendor/cache
