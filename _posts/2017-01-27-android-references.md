@@ -82,6 +82,13 @@ As an Android Developer, you have to know all these references.
 
 <i class="fa fa-twitter" aria-hidden="true"></i> [Material Up](https://twitter.com/MaterialUp)
 
+## <a name="conf"></a><i class="fa fa-code" aria-hidden="true"></i> Android Open Source Project
+
+
+<i class="fa fa-code" aria-hidden="true"></i> [Open Source Project of droidcon PL 2015 App](https://github.com/droidconpl/droidcon-2015-mobile-app)
+
+<i class="fa fa-globe" aria-hidden="true"></i> Want more? Checkout this [21 Android Open Source Project](https://techbeacon.com/how-master-android-what-developers-can-learn-21-apps)
+
 ## <a name="conf"></a><i class="fa fa-bullhorn" aria-hidden="true"></i> Conferences
 
 <i class="fa fa-bullhorn" aria-hidden="true"></i> [Google IO](https://events.google.com/io/)
