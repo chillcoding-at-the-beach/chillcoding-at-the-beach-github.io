@@ -9,10 +9,10 @@ before_script:
   - apt-get upgrade -y
   - apt-get install nodejs -y
   - gem install bundler --no-ri --no-rdoc
-  - bundle install --jobs $(nproc) --deployment --without development --full-index
+  - bundle install --jobs $(nproc) --deployment --without development --full-index --retry 3 --clean
 
 pages:
-  stage: deploy
+  stage: pages
   environment: production
   script:
     - bundle exec jekyll build -d public
@@ -21,3 +21,10 @@ pages:
       - public
   only:
     - master
+
+cache gems:
+  script:
+    - bundle package --all --all-platforms
+  artifacts:
+    paths:
+      - vendor/cache
