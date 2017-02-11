@@ -12,16 +12,15 @@ stages:
   - build
   - pages
 
-# jekyll-coffeescript need a JS runtime...
-before_script:
-  - apt-get update
-  - apt-get upgrade -y
-  - apt-get install nodejs -y
-  - gem install bundler --no-ri --no-rdoc
-  - bundle install --jobs $(nproc) --deployment --without development --full-index --retry 3 --clean
-
 build:
   stage: build
+  # jekyll-coffeescript need a JS runtime...
+  before_script:
+    - apt-get update
+    - apt-get upgrade -y
+    - apt-get install nodejs -y
+    - gem install bundler --no-ri --no-rdoc
+    - bundle install --jobs $(nproc) --deployment --without development --full-index --retry 3 --clean
   script:
     - bundle exec jekyll build -d ./.public
   artifacts:
