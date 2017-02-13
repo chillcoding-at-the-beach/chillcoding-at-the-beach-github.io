@@ -21,6 +21,8 @@ Here are the best references I have selected in terms of:
 
 [<i class="fa fa-android" aria-hidden="true"></i> Groups](#groups)
 
+[<i class="fa fa-android" aria-hidden="true"></i> Open Source Projects](#projects)
+
 [<i class="fa fa-bullhorn" aria-hidden="true"></i> Conferences](#conf)
 
 As an Android Developer, you have to know all these references.
@@ -81,6 +83,12 @@ As an Android Developer, you have to know all these references.
 <i class="fa fa-globe" aria-hidden="true"></i> [Paris Android User Group (FR)](http://www.paug.fr/)
 
 <i class="fa fa-twitter" aria-hidden="true"></i> [Material Up](https://twitter.com/MaterialUp)
+
+## <a name="projects"></a><i class="fa fa-code" aria-hidden="true"></i> Open Source Projects
+
+<i class="fa fa-code" aria-hidden="true"></i> [Open Source Project of droidcon PL 2015 App](https://github.com/droidconpl/droidcon-2015-mobile-app)
+
+<i class="fa fa-globe" aria-hidden="true"></i> Want more? Checkout this [21 Android Open Source Apps](https://techbeacon.com/how-master-android-what-developers-can-learn-21-apps)
 
 ## <a name="conf"></a><i class="fa fa-bullhorn" aria-hidden="true"></i> Conferences
 
