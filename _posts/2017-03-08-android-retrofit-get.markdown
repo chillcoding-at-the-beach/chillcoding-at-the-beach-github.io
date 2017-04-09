@@ -2,7 +2,6 @@
 title:  "Make HTTP GET requests in Android with Retrofit"
 category: coding
 author: machadacosta
-excerpt: This post is about making an HTTP GET request with retrofit in an Android project.
 permalink: /android-retrofit-send-http/
 ---
 
