@@ -40,7 +40,6 @@ build:docker:
   stage: build
   <<: *docker_base
   script:
-    - echo $CURRENT_IMAGE_TAG
     - docker build -t $CURRENT_IMAGE_TAG .
     - docker push $CURRENT_IMAGE_TAG
 
@@ -58,10 +57,7 @@ release:site:
 release:docker:
   stage: release
   <<: *docker_base
-  variables:
   script:
-    - echo $CURRENT_IMAGE_TAG
-    - echo $LATEST_IMAGE_TAG
     - docker pull $CURRENT_IMAGE_TAG
     - docker tag $CURRENT_IMAGE_TAG $LATEST_IMAGE_TAG
     - docker push $LATEST_IMAGE_TAG
