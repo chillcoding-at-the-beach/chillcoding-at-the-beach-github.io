@@ -12,7 +12,7 @@ stages:
     DOCKER_DRIVER: overlay
   before_script:
     - docker info
-    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CURRENT_IMAGE_TAG
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
 
 build:site:
   stage: build
