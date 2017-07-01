@@ -1,18 +1,22 @@
-image: ruby:2.3
-
-cache:
-  key: "ruby-2.3"
-  paths:
-    - vendor/ruby
-
 stages:
-  - site:build
-  - pages
-  - docker:build
-  - docker:release
+  - build
+  - release
+
+.docker:base: &docker_base
+  image: docker:latest
+  services:
+    - docker:dind
+  variables:
+    CURRENT_IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+    LATEST_IMAGE_TAG: $CI_REGISTRY_IMAGE:latest
+    DOCKER_DRIVER: overlay
+  before_script:
+    - docker info
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CURRENT_IMAGE_TAG
 
 build:site:
-  stage: site:build
+  stage: build
+  image: ruby:2.3
   variables:
     JEKYLL_ENV: gitlab
   before_script:
@@ -27,9 +31,20 @@ build:site:
   artifacts:
     paths:
       - ./.public
+  cache:
+    key: "ruby-2.3"
+    paths:
+      - vendor/ruby
 
-pages:
-  stage: pages
+build:docker:
+  stage: build
+  <<: *docker_base
+  script:
+    - docker build -t $CURRENT_IMAGE_TAG .
+    - docker push $CURRENT_IMAGE_TAG
+
+release:site:
+  stage: release
   environment: production
   script:
     - mv ./.public ./public
@@ -39,27 +54,8 @@ pages:
   only:
     - master
 
-.docker:base: &docker_base
-  image: docker:latest
-  services:
-    - docker:dind
-  variables:
-    CURRENT_IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
-    LATEST_IMAGE_TAG: $CI_REGISTRY_IMAGE:latest
-    DOCKER_DRIVER: overlay
-  before_script:
-    - docker info
-    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CURRENT_IMAGE_TAG
-
-docker:image:
-  stage: docker:build
-  <<: *docker_base
-  script:
-    - docker build -t $CURRENT_IMAGE_TAG .
-    - docker push $CURRENT_IMAGE_TAG
-
-docker:latest:
-  stage: docker:release
+release:docker:
+  stage: release
   <<: *docker_base
   variables:
   script:
