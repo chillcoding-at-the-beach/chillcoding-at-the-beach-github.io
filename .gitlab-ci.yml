@@ -1,23 +1,24 @@
 image: ruby:2.3
 
-variables:
-  JEKYLL_ENV: gitlab
-
 cache:
   key: "ruby-2.3"
   paths:
     - vendor/ruby
 
 stages:
-  - build
+  - site:build
   - pages
+  - docker:build
+  - docker:release
 
-build:
-  stage: build
-  # jekyll-coffeescript need a JS runtime...
+build:site:
+  stage: site:build
+  variables:
+    JEKYLL_ENV: gitlab
   before_script:
     - apt-get update
     - apt-get upgrade -y
+    # jekyll-coffeescript need a JS runtime...
     - apt-get install nodejs -y
     - gem install bundler --no-ri --no-rdoc
     - bundle install --jobs $(nproc) --deployment --without development --full-index --retry 3 --clean
@@ -35,5 +36,35 @@ pages:
   artifacts:
     paths:
       - ./public
+  only:
+    - master
+
+.docker:base: &docker_base
+  image: docker:latest
+  services:
+    - docker:dind
+  variables:
+    CURRENT_IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+    LATEST_IMAGE_TAG: $CI_REGISTRY_IMAGE:latest
+    DOCKER_DRIVER: overlay
+  before_script:
+    - docker info
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CURRENT_IMAGE_TAG
+
+docker:image:
+  stage: docker:build
+  <<: *docker_base
+  script:
+    - docker build -t $CURRENT_IMAGE_TAG .
+    - docker push $CURRENT_IMAGE_TAG
+
+docker:latest:
+  stage: docker:release
+  <<: *docker_base
+  variables:
+  script:
+    - docker pull $CURRENT_IMAGE_TAG
+    - docker tag $CURRENT_IMAGE_TAG $LATEST_IMAGE_TAG
+    - docker push $LATEST_IMAGE_TAG
   only:
     - master
