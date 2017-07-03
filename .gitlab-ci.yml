@@ -1,8 +1,10 @@
 stages:
   - build
+  - pages
   - release
 
 .docker:base: &docker_base
+  when: manual
   image: docker:latest
   services:
     - docker:dind
@@ -44,7 +46,7 @@ build:docker:
     - docker push $CURRENT_IMAGE_TAG
 
 pages:
-  stage: release
+  stage: pages
   environment: production
   script:
     - mv ./.public ./public
