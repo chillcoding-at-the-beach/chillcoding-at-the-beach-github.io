@@ -1,16 +1,52 @@
+{% assign author = site.data.members[page.author] %}
+{% capture twitter_link %}{{ author.twitter | prepend: "https://twitter.com/" }}{% endcapture %}
+
 <article class="{{ include.context }}">
-  <h2>
-    <a href="{{ page.url }}" class="permalink" title="Permalink">
+  {% if include.context == 'home' %}
+    <h2 class="text-center">
+      <a href="{{ page.url }}" class="permalink" title="Permalink">
+        {{ page.title }}
+      </a>
+    </h2>
+  {% else %}
+    <h1 class="text-center">
       {{ page.title }}
-    </a>
-  </h2>
+    </h1>
+  {% endif %}
+
   <div class="post-meta">
-    <span class="post-date"><em>{{ page.date | date_to_long_string }}</em></span>
-    <span class="post-category">
-      {% for category in page.categories %}
-        <a href="/{{ category }}"><em>#{{ category }}</em></a>
-      {% endfor %}
-    </span>
+    {% if include.context == 'home' %}
+      <div class="post-meta-content">
+        {% for category in page.categories %}
+          <a href="/blog/{{ category }}" class="badge text-uppercase">{{ category }}</a>
+        {% endfor %}
+
+        <time class="text-uppercase" itemprop="datePublished" datetime="{{ page.date }}">{{ page.date | date: "%A, %B %-d, %Y" }}</time>
+
+        <span class="author text-uppercase">
+          <a href="{{ twitter_link }}" target="_blank">{{ site.data.members[page.author].name }}</a>
+        </span>
+      </div>
+    {% else %}
+      <div class="post-meta-content">
+        <time class="text-uppercase" itemprop="datePublished" datetime="{{ page.date }}">{{ page.date | date: "%A, %B %-d, %Y" }}</time>
+
+        <a href="{{ twitter_link }}">
+          <img width="100" height="100" alt="{{ author.name }}" class="avatar" src="{{ author.image }}">
+        </a>
+
+        <span class="author text-uppercase">
+          Posted by <a href="{{ twitter_link }}" target="_blank">{{ site.data.members[page.author].name }}</a>
+        </span>
+
+        <div class="categories">
+          {% for category in page.categories %}
+            <a href="/blog/{{ category }}" class="badge text-uppercase">{{ category }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      <hr />
+    {% endif %}
   </div>
   <div class="post-content">
     {% if include.context == 'home' %}

@@ -29,6 +29,7 @@ gems:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # These are the default on GitHub Pages:
 # https://help.github.com/articles/configuring-jekyll/#defaults-you-can-change

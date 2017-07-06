@@ -1,10 +1,12 @@
 ---
 title: "Android UI Cheatsheet"
-category: coding
-author: machadacosta
+categories: coding android
+author: macha
 ---
 
-![Android View](/assets/img/post/android-view.png)
+<div class="text-center lead" markdown="1">
+  ![Android View](/assets/img/post/android-view.png)
+</div>
 
 To create native UI in Android, here are some UI elements ordered by type with references.
 

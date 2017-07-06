@@ -4,6 +4,8 @@ company:
   github: chillcoding-at-the-beach
   gitlab: chillcoding-at-the-beach
   linkedin: chillcoding
+  facebook: chillcoding
+  youtube: UC7zsJkyBB5GET2LhinsBNpw
   email: hello@chillcoding.com
   website: https://www.chillcoding.com
 
@@ -15,6 +17,7 @@ macha:
   linkedin: MachaDaCosta
   email: macha@chillcoding.com
   website: http://www.machada.io
+  image: /assets/img/macha.jpg
 
 remy:
   name: Rémy Coutable
@@ -24,3 +27,4 @@ remy:
   linkedin: rymai
   email: remy@chillcoding.com
   website: https://www.rymai.me
+  image: /assets/img/remy.jpg

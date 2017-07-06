@@ -13,6 +13,22 @@
     -o-background-size: cover;
 }
 
+@mixin gradient-left-3-colors($color, $fade_color)
+{
+  background-image: -webkit-linear-gradient(from left, $fade_color 0%, $color 10%, $color 90%, $fade_color 100%);
+  background-image: -webkit-linear-gradient(left, $fade_color 0%, $color 10%, $color 90%, $fade_color 100%);
+  background-image: linear-gradient(to right, $fade_color 0%, $color 10%, $color 90%, $fade_color 100%);
+  background-color: transparent;
+}
+
+@mixin gradient-top-left-2-colors($dark_color, $bright_color, $bg_color)
+{
+  background-image: -webkit-linear-gradient(from top left, $dark_color 0%, $bright_color 100%);
+  background-image: -webkit-linear-gradient(top left, $dark_color 0%, $bright_color 100%);
+  background-image: linear-gradient(to bottom right, $dark_color 0%, $bright_color 100%);
+  background-color: $bg_color;
+}
+
 @mixin button-variant($color, $background, $border)
 {
 	color: $color;

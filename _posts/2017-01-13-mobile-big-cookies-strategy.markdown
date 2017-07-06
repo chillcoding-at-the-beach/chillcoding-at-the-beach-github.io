@@ -1,16 +1,20 @@
 ---
-title:  "Big Cookie Strategy"
-category: coding
-author: machadacosta
+title: "Big Cookie Strategy"
+categories: coding mobile
+author: macha
 ---
 
-![Big Cookie Strategy in Mobile Development](/assets/img/post/mobile-server.png)
+<div class="text-center lead" markdown="1">
+  ![Big Cookie Strategy in Mobile Development](/assets/img/post/mobile-server.png)
+</div>
 
 This post is about the Big Cookie Strategy in particular the Big Cookie Model. The goal is to optimise exchange between a server and a mobile application. It has been elaborated based on real life study case, far away of perfect development context where connectivity is of very high quality.
 
-## What is Big Cookie Strategy?
+## What is the Big Cookie Strategy?
 
-![Big Cookie Strategy in Mobile Development](/assets/img/post/big-cookie-strategy.png)
+<div class="text-center lead" markdown="1">
+  ![Big Cookie Strategy in Mobile Development](/assets/img/post/big-cookie-strategy.png)
+</div>
 
 Step by step:
 

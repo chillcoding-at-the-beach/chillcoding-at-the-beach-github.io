@@ -1,10 +1,12 @@
 ---
 title: "Android References"
-category: coding
-author: machadacosta
+categories: coding android
+author: macha
 ---
 
-![Android Tools](/assets/img/post/android-config.png)
+<div class="text-center lead" markdown="1">
+  ![Android Tools](/assets/img/post/android-config.png)
+</div>
 
 There are so many Android resources out there, it's hard to know the ones that are essential.
 Here are the best references I have selected in terms of:

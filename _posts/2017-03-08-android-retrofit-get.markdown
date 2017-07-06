@@ -1,11 +1,13 @@
 ---
-title:  "Make HTTP GET requests in Android with Retrofit"
-category: coding
-author: machadacosta
+title: "Make HTTP GET requests in Android with Retrofit"
+categories: coding android
+author: macha
 permalink: /android-retrofit-send-http/
 ---
 
-![Android HTTP Request](/img/post/android-request.png)
+<div class="text-center lead" markdown="1">
+  ![Android HTTP Request](/assets/img/post/android-request.png)
+</div>
 
 This tutorial explains how to make an HTTP GET request with the Retrofit library in an Android Studio (AS) project. JSON format with Retrofit version 2.2 is used (latest version to date).
 
