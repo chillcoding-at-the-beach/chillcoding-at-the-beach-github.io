@@ -42,7 +42,7 @@ body.newsletter {
   }
 
   button.submit {
-    width:150px;
+    width:200px;
     height:50px;
     border:1px solid $theme-secondary;
     background:$white;
@@ -130,5 +130,12 @@ body.newsletter {
     color:#000;
     outline:none;
     background-color:$white;
+  }
+
+  #mce-error-response {
+    background-color: #f2dede;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
   }
 }
