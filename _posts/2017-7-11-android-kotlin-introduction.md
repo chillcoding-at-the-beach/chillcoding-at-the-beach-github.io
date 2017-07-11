@@ -1,21 +1,25 @@
 ---
 title: "Android : Introduction à Kotlin"
 category: coding
-author: machadacosta
+author: macha
 ---
 
-![Android Kotlin](/assets/img/post/android-kotlin.png)
+<div class="text-center lead" markdown="1">
+  ![Android Kotlin](/assets/img/post/android-kotlin.png)
+</div>
 
 Le bruit des vagues, le sable fin, les pieds dans l'eau, le soleil sur la peau, ma vidéo sur l'introduction du langage _Kotlin_ dans _Android_ s'est réalisée dans ces conditions.
 
-<iframe width="420" alt="fish video" height="315" src="https://youtu.be/mrJmVjsJlYU" frameborder="0" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/mrJmVjsJlYU" frameborder="0" allowfullscreen></iframe>
 
 ## Kotlin is here!
+
 Le G des GAFA a officialisé le support du langage _Kotlin_ pour le développement d'application mobile _Android_, cette année 2017, à la fameuse conférence G I/O, les 17-19 mai 2017.
 
 Dans cet article, nous donnerons des éléments de réponses à la question [Pourquoi Kotlin ?](#pourquoi). Aussi, ce langage sera décrit [en bref](#kotlin). Puis, nous verrons son [support dans Android Studio](#android-studio). Enfin, nous nous interrogerons sur l'[avenir d'_Android_](#next).
 
 ## <a name="pourquoi"></a><i class="fa fa-google" aria-hidden="true"></i> Pourquoi Kotlin ?
+
 **Mais pourquoi est-il aussi méchant ?** Si vous ne connaissez pas cette référence, je vous invite à aller voir [cette vidéo](https://www.youtube.com/watch?v=EHY4I29jxjo){:target="_blank"} :)
 
 Jusqu'à présent, _Android_ utilise la technologie *Java*, initialement développée par *Sun Microsystems*, en 1995. L'avantage de cette technologie est de faire fonctionner un code, écrit en *Java*, de manière identique sur n'importe quel système d'exploitation (*Linux*, *Windows* ou *macOS*), ceci grâce à la machine virtuelle JVM.
@@ -64,11 +68,13 @@ D'ailleurs, voici les principaux atouts du support de _Kotlin_ dans *AS 3* :
 
 
 ### Créer un projet Kotlin
+
 1. Dans *AS 3*, créer un nouveau projet : `Start a new Android Studio project`.
 2. Cocher la case `Include Kotlin support`, si ce n'est pas déjà le cas.
 3. Cliquer sur `Next` puis configurer le projet à votre guise.
 
 ### <a name="convert"></a> Convertir un fichier Java en Kotlin
+
 Aller dans le menu `Code > Convert Java File to Kotlin File`
 
 ## <a name="next"></a><i class="fa fa-calendar" aria-hidden="true"></i> What is next ?
