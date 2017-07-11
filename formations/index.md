@@ -22,9 +22,6 @@ Dans vos locaux ou des locaux extérieurs.
 ## Durée
 3 à 5 jours
 
-## Tarif
-500 € HT par jour et par personne
-
 La formation est basée sur un tronc commun se déroulant sur 3 jours. Ensuite, des jours optionnels peuvent être sélectionnés à la carte afin d'adapter la formation en fonction des besoins.
 
 ## Pré-requis
@@ -198,7 +195,6 @@ Introduction à l’App Store Optimization, la Console de Publication, et les St
 
 #### Pratique : Premiers projets sur Android Wear
 
-[<i class="fa fa-file-pdf-o" aria-hidden="true"></i> Télécharger le Programme Détaillé](/doc/formation developpement android.pdf)
 
 N'hésitez pas à contacter <a href="mailto:{{ site.data.members.macha.email }}" title="{{ site.data.members.macha.email }}">
   <i class="fa fa-envelope-o fa-x" data-wow-delay=".2s"></i> {{ site.data.members.macha.email }}
