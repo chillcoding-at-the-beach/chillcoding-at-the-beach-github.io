@@ -1,6 +1,6 @@
 ---
 title: "Blog de ChillCoding"
-category: chillcoding
+categories: chillcoding fr
 author: macha
 ---
 

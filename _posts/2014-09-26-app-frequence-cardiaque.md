@@ -1,8 +1,9 @@
 ---
 title: "Pouls, fréquence ou rythme cardiaque?"
-category: chill
+categories: chill fr
 author: macha
 ---
+
 Le pouls est la perception du flux sanguin propulsé par le coeur, il est déterminé en palpant une artère situé au cou (pouls central), au poignet (pouls radial), ou à d'autres endroit sur le corps. La prise de pouls est un témoin de la pression artérielle, elle permet de vérifier la symétrie (gauche, droite) ainsi que d'évaluer de manière simple la fréquence cardiaque et le rythme cardiaque.
 
 La fréquence cardiaque (FC) est le nombre de pulsation par unité de temps. Elle s'exprime généralement en bpm soit battement par minute. C'est une notion quantitative alors que le rythme cardiaque (RC) est une notion qualitative. En effet, il désigne la manière dont s'enchaine les pulsations (par exemple : deux pulsations rapprochées suivies d'une éloignée).
