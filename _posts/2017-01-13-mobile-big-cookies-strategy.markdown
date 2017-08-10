@@ -1,6 +1,6 @@
 ---
 title: "Big Cookie Strategy"
-categories: coding
+categories: coding en
 author: macha
 ---
 

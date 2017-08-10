@@ -1,6 +1,6 @@
 ---
 title: "Android UI Cheatsheet"
-categories: coding android
+categories: coding android en
 author: macha
 ---
 

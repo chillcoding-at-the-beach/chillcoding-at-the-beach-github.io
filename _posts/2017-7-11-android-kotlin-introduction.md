@@ -1,6 +1,6 @@
 ---
 title: "Android : Introduction à Kotlin"
-category: coding
+categories: coding android kotlin fr
 author: macha
 ---
 

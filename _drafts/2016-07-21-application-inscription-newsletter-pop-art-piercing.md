@@ -1,6 +1,6 @@
 ---
 title: "Application d'inscription à une newsletter pour PopArt Piercing"
-category: coding
+categories: coding fr
 author: macha
 ---
 

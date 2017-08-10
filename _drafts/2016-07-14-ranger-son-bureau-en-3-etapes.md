@@ -1,6 +1,6 @@
 ---
 title: "Ranger son bureau en 3 étapes"
-category: chill
+categories: chill fr
 author: remy
 ---
 
