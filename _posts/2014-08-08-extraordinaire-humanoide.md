@@ -27,6 +27,6 @@ Les 2 langages, java ou C, peuvent être utilisés pour programmer un support An
 
 ## Supports de cours
 
-La première séance est dédié à l'[installation de l'environnement de développement](/blog/2017/08/03/android-demarrage/) (TD 1) ainsi qu'à la création de projets et au déploiement d'applications (TP 1).
+La première séance est dédié à l'[installation de l'environnement de développement](/blog/2016/08/03/android-demarrage/) (TD 1) ainsi qu'à la création de projets et au déploiement d'applications (TP 1).
 
 Pour chaque TP ou TD, il est indiqué le temps estimé : allant de 45 min. (minutes) à 3 h. (heures).

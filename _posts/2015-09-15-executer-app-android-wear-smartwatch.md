@@ -6,7 +6,7 @@ author: macha
 
 Pour déployer une app. Android Wear, en cours de développement, sur une montre connectée (ou smartwatch), il faut au préalable :
 
-  * [installer un environnement de développement Android](/blog/2017/08/03/android-demarrage/)
+  * [installer un environnement de développement Android](/blog/2016/08/03/android-demarrage/)
   * disposer d'une smartwatch Android (ex : Moto 360 de Motorola, LG, Samsung, etc.)
   * disposer d'un smartphone Android d'une version supérieur à la 4.4 (Kitkat)
 Dans ce tutoriel, accompagné d'un screencast, nous allons voir comment préparer un environnement de développement pour Android Wear, soit comment déployer une app. spécialement conçue pour la montre connectée.
