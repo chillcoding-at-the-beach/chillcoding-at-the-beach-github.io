@@ -1,80 +1,90 @@
 ---
 title: "Installer un environnement de développement Android"
-categories: coding tutoriel fr
+categories: coding android fr
 author: macha
 ---
 
-Ce tuto détaille comment installer un environnement de développement Android,
-pour le langage Java avec Android Studio (AS).
+<div class="text-center lead" markdown="1">
+  ![Android HTTP Request](/assets/img/post/android-config.png)
+</div>
 
-Pour installer un environnement de développement Android, vous pouvez soit
-télécharger l’environnement complet à partir du site officiel, soit télécharger
-seulement le SDK Android (System Development Kit) en utilisant un IDE
-(Integrated Development Environment) existant comme Eclipse ou Netbeans.
-En général, le langage Java est utilisé pour programmer sous Android. Cependant,
-il est possible d’utiliser du C ou C++ si cela est nécessaire pour l’application
-(cf. application utilisant de manière intensive le CPU).
+Ce tutoriel détaille comment installer un environnement de développement _Android_.
+_Android Studio_, il conviendra d'utiliser l'abréviation _AS_, est le logiciel officiel, supporté par Google, basé sur IntelliJ de la société JetBrains.
+
+Pour installer un environnement de développement _Android_, la solution la plus adéquate est de
+télécharger _AS_ à partir du site officiel.
+Une alternative est de télécharger seulement le _SDK Android_ (_SDK_ est l'acronyme de _System Development Kit_) en utilisant un _IDE_
+(_Integrated Development Environment_) existant comme _Eclipse_ ou _Netbeans_.
+
+Jusqu'à présent, le langage _Java_ était utilisé pour programmer sous _Android_. Cela dit, depuis l'annonce officiel du support du langage _Kotlin_ dans _Android_ (cf. [article d'Introduction à Kotlin](/blog/2017/07/11/android-kotlin-introduction/)), il est recommandé de privilégier ce dernier dans vos développements d'application _Android_. En effet, _Kotlin_ nous évite de taper des lignes de code inutiles, _boilerplate_ en anglais.
+Par ailleurs, il est possible d’utiliser du _C_ ou _C++_, si cela est nécessaire pour l’application
+Par exemple, une application utilisant de manière intensive le _CPU_, ou bien utilisant une bibliothèque _C_.
+
+Dans la suite, nous nous concentrerons sur le développement d'application _Android_, avec le langage _Kotlin_, dans _Android Studio_.
 
 ## Télécharger Android Studio
-1. Aller sur le site de référence Android : developer.android.com
-2. Puis dans la partie Develop > Tool
-3. Télécharger Android Studio, AS
-4. Lancer AS,
-5. Si Java n'est pas déjà installé sur votre ordinateur alors une pop-up va vous
-  suggérer de le faire, suivre les instructions d'installation, il faudra
-  également installer le dernier JDK
-6. Re-lancer AS
+1. Allez sur le site de référence Android : [developer.android.com](https://developer.android.com/){:target="_blank"}
+2. Puis dans la partie _DEVELOP_ > _Android Studio_
+3. Téléchargez AS
+4. Lancez le logiciel
+5. Si _Java Development Kit_ n'est pas déjà installé sur votre ordinateur alors une fenêtre devrait vous
+  suggérer de le faire, suivre les instructions d'installation
+6. Re-lancez AS
 
-##  Installer les packages nécessaires à la création d'un projet sous AS
+##  Installer les paquetages nécessaires à la création d'un projet
 
-1. AS propose de configurer l'environnement de développement, choisir Standard
-2. Accepter les licences et cliquer sur Finish. Le téléchargement des derniers
-  packages (ici relatifs au SDK Lollipop, API 22) est lancé et peut prendre
-  quelques dizaines de minutes
-3. Avant de commencer un nouveau projet, aller dans Configure > SDK Manager et
-  remarquer les packages installés. Ici, pour l'API 22 :
+1. AS propose de configurer l'environnement de développement, choisissez Standard
+2. Acceptez les licences et cliquer sur _Finish_. Le téléchargement des derniers
+  paquetages (ici relatifs à la dernière version O, API 26) est lancé et peut prendre
+  quelques dizaines de minutes. Veillez à ne télécharger que la **dernière version d'Android**.
+3. Avant de commencer un nouveau projet, aller dans _Configure_ > _SDK Manager_ et
+  remarquer les paquetages installés. Ici, pour l'API 26 :
  * SDK Platform
  * SYSTEM IMAGE (pour l'émulateur) : Google APIs Intel x86 Atom System Image
  * SRC : Sources for Android SDK
 
 
-## Installer les packages nécessaires au lancement d'un émulateur
+## Installer les paquetages nécessaires au lancement d'un émulateur
 
-1. Télécharger les packages nécéssaire au lancement de l'émulateur :
- * Intel x86 Emulator Accelerator (HAXM installer) dans le dossier Extras/
- * ARM EABI v7a System Image dans le dossier de la dernière version du SDK
-  téléchargé (ici Android 5.1.1 (API 22)/)
-2. Re-lancer AS afin que ces téléchargements soient pris en compte
-3. Créer un nouveau projet configuré avec le SDK précédemment téléchargé (ici,
-  API 22)
-4. Ouvrer l'AVD Manager (cf. Icône pour ouvrir l'AVD Manager)
-5. Créer un émulateur avec les configurations suivantes :
-  * Select Hardware : Configurer le matériel et cliquer sur Next.
+1. Téléchargez les paquetages nécéssaires au lancement de l'émulateur :
+ * _Intel x86 Emulator Accelerator (HAXM installer)_ dans le dossier _Extras/_
+ * _ARM EABI v7a System Image_ dans le dossier de la dernière version du _SDK_
+  téléchargé
+2. Re-lancez AS afin que ces téléchargements soient pris en compte, si besoin
+3. Créez un nouveau projet configuré avec le _SDK_ précédemment téléchargé
+4. Ouvrez l'_AVD Manager_ disponible à partir de l'icône avec un _smartphone_ accompagné d'un aperçu de la tête  de notre mascotte verte, en bas à droite
+5. Créez un émulateur avec les configurations suivantes :
+  * Select Hardware : Configurez le matériel et cliquer sur _Next_.
     Par exemple Category : Phone, Name : Nexus S, Size : 4.0'', Resolution :
     480x800, Density : hdpi
-  * System Image : Configurer le système d'exploitation et cliquer sur Next. Par
+  * System Image : Configurer le système d'exploitation et cliquer sur _Next_. Par
     exemple Release Name : Lollipop, API level : 22, ABI : armeabi-v7a, Target :
     Android 5.1.1
-  * Android Virtual Device (AVD) : Vérifier la configuration et cliquer sur Finish
-6. Lancer l'émulateur ainsi créé
-
-Remarque : l'impression écran Icône pour ouvrir l'AVD Manager, présente
-également l'icône pour ouvrir le SDK Manager (à droite), permettant de
-télécharger le dernier SDK Android ou autres l'icône pour ouvrir Android Device
-Manager, permettant de voir les logs des émulateurs lancés ou smartphones
-connectés.
-
-Note : Il est recommandé d'installer le package des sources exemples pour la
-suite des tutos.
+  * Android Virtual Device (AVD) : Vérifiez la configuration et cliquer sur Finish
+6. Lancez l'émulateur ainsi créé via l'icône flèche verte situé a côté de celui-ci
 
 ## Lancer un projet sur un émulateur ou un smartphone
 
-1. Créer brièvement un nouveau projet android
-2. Executer le projet (en cliquant sur la flèche verte)
-3. Choisir de lancer l'app sur l'émulateur précédemment lancé ou bien sur le smartphone connecté
-  * Si le smartphone est bien branché et n'apparait pas, vérifier qu'il est bien placé en mode Debug.
+1. Reprenez le projet _Android_ déjà créé ou créez en un brièvement
+2. Exécutez le projet (en cliquant sur la flèche verte)
+3. Choisir de lancer l'app. sur l'émulateur précédemment lancé ou bien sur le smartphone branché en USB à votre ordinateur
+  * Si le smartphone est bien branché et n'apparait pas, vérifier qu'il est bien placé en mode _Debug_.
   * Il est aussi possible de vérifier qu'il soit bien connecté via un terminal :
-1. Ouvrer un terminal
-2. Placer vous dans le dossier `platforms-tools/` du SDK  (ex : `/Users/macha/Librairy/android/sdk/platforms-tool/`)
-  * Depuis AS, aller dans File>Project Structure>SDK Location pour connaître le dossier par défaut dans lequel AS place les sdk
-3. Taper la commande adb device, elle permet d'obtenir la liste des smartphones ou tablettes connectées
+   1. Ouvrez un terminal
+   2. Placez vous dans le dossier `platforms-tools/` du _SDK_ (ex : `/Users/macha/Librairy/android/sdk/platforms-tool/`)
+   3. Tapez la commande _adb device_, elle permet d'obtenir la liste des smartphones ou tablettes connectées
+
+Note : dans AS, afin de connaître le dossier par défaut, dans lequel AS place les _SDK_, allez dans _File_ > _Project Structure_ > _SDK Location_
+
+Finalement, nous avons créé un projet vide et l'avons exécuté sur un émulateur ou _smartphone_. Cela, après avoir installé AS puis téléchargé les paquetages relatifs la dernière version d'_Android_.
+
+Pour commencer les 3 premiers icônes à retenir sont :
+
+  * _AVD Manager_ : le _smartphone_ avec une tête de _droid_
+  * _SDK Manager_ : une flèche bleu vers le bas avec une tête de _droid_
+  * Exécution d'un projet : la flèche verte
+
+Le _SDK Manager_ permet de télécharger le dernier _SDK Android_ ou autres.
+
+*[CPU]: Central Processing Unit
+*[AS]: Android Studio

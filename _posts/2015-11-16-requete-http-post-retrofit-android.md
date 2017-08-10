@@ -1,8 +1,12 @@
 ---
 title: "Faire une requête HTTP POST avec Retrofit en Android"
-categories: coding android tutoriel fr
+categories: coding android serveur fr
 author: macha
 ---
+
+<div class="text-center lead" markdown="1">
+  ![Android HTTP Request](/assets/img/post/android-request.png)
+</div>
 
 Ce tutoriel va vous donner les clés pour faire une requête HTTP POST au format
 JSON, en Android, avec la librairie [**Retrofit 2.0**](http://square.github.io/retrofit/).

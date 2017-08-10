@@ -1,8 +1,12 @@
 ---
 title: "Configurer un projet Android pour utiliser Retrofit"
-categories: coding android tutoriel fr
+categories: coding android serveur fr
 author: macha
 ---
+
+<div class="text-center lead" markdown="1">
+  ![Android HTTP Request](/assets/img/post/android-request.png)
+</div>
 
 Ce tutoriel explique comment configurer un projet Android pour utiliser la
 librairie [**Retrofit 2.0**](http://square.github.io/retrofit/). Une brève étude

@@ -1,8 +1,13 @@
 ---
 title: "Utiliser le fichier de Préférences dans une application Android"
-categories: coding android tutoriel fr
+categories: coding android BDD fr
 author: macha
 ---
+
+<div class="text-center lead" markdown="1">
+  ![Android HTTP Request](/assets/img/post/android-bdd.png)
+</div>
+
 
 Le fichier _SharedPreferences_ ou _Preferences_ correspond au fichier de
 préférences de l'application. On l'utilise pour sauvegarder des données
