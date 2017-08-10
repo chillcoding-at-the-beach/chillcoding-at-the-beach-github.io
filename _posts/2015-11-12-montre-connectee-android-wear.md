@@ -1,8 +1,12 @@
 ---
 title: "De bons présages pour Android Wear"
-categories: android fr
+categories: chill android wear fr
 author: macha
 ---
+
+<div class="text-center lead" markdown="1">
+  ![Android HTTP Request](/assets/img/post/android-wear.png)
+</div>
 
 Les montres connectées ont la côte en 2015 et il y en a pour tous les goûts, que
 ce soit celles de grandes marques comme la_ Tag Heuer Connected_, l'_Apple

@@ -1,8 +1,12 @@
 ---
 title: "Réussir la Publication d'une App Android"
-categories: android aso fr
+categories: chill android aso fr
 author: macha
 ---
+
+<div class="text-center lead" markdown="1">
+  ![Android HTTP Request](/assets/img/post/android-aso.png)
+</div>
 
 C'est officiel, le _Play Store_ compte plus de deux millions d'applications !
 Dans ce contexte, il est très difficile de sortir du lot. Le livre blanc

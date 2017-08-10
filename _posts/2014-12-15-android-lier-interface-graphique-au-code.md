@@ -1,8 +1,12 @@
 ---
 title: "Android : Lier une interface graphique au code"
-categories: coding android tutoriel fr
+categories: coding android vue fr
 author: macha
 ---
+
+<div class="text-center lead" markdown="1">
+  ![Android HTTP Request](/assets/img/post/android-view.png)
+</div>
 
 Une app. Android est principalement composé d'**Activity** et de **Fragment** placés dans le dossier src/ du projet. Par défaut, l'**Activity** _MainActivity_, créé par l'IDE (Integrated Development Environment, ex : Android Studio), est lancé au démarrage de l'app. Ceci est configuré dans le fichier **Manifest**.
 

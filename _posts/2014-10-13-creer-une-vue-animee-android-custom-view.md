@@ -1,8 +1,12 @@
 ---
 title: "Créer une vue animée sous Android (Custom View : the best part)"
-categories: coding android tutoriel fr
+categories: coding android vue fr
 author: macha
 ---
+
+<div class="text-center lead" markdown="1">
+  ![Android HTTP Request](/assets/img/post/android-view.png)
+</div>
 
 Dans ce tutoriel, il est expliqué comment créer une simple vue (**View**)
 personnalisée et animée sous _Android_.

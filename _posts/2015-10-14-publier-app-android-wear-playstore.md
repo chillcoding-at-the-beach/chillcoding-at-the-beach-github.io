@@ -1,8 +1,12 @@
 ---
 title: "Publier une app. Android Wear sur le Play Store"
-categories: android aso fr
+categories: coding android publication fr
 author: macha
 ---
+
+<div class="text-center lead" markdown="1">
+  ![Android HTTP Request](/assets/img/post/android-wear.png)
+</div>
 
 Vous avez développé une app. pour la montre connectée Google et il ne vous reste
 plus qu'à la publier. Attention, cela peut prendre plusieurs heures ! En

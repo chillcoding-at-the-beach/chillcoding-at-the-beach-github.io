@@ -4,6 +4,10 @@ categories: coding android fr
 author: macha
 ---
 
+<div class="text-center lead" markdown="1">
+  ![Android HTTP Request](/assets/img/post/android-config.png)
+</div>
+
 Cet article présente une sélection de raccourcis clavier sur Android Studio pour augmenter votre rapidité de développement.
 
 1. Aller sur la classe ou l'élément : Cmd/Ctrl+click sur l'élément

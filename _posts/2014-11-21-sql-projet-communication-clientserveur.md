@@ -1,8 +1,12 @@
 ---
 title: Communication Client/Serveur
-categories: coding android tutoriel fr
+categories: coding android serveur fr
 author: macha
 ---
+
+<div class="text-center lead" markdown="1">
+  ![Android HTTP Request](/assets/img/post/android-request.png)
+</div>
 
 Dans le cadre de l'enseignement **SQLite** effectué en
 [LP DAM](http://dam.unice.fr/doku.php) (_Licence Professionnelle Développement

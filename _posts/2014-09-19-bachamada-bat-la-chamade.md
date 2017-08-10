@@ -1,8 +1,12 @@
 ---
 title: "BaChamada sur PlayStore"
-categories: chillcoding android fr
+categories: chillcoding android application fr
 author: macha
 ---
+
+<div class="text-center lead" markdown="1">
+  ![Android HTTP Request](/assets/img/post/android-love.png)
+</div>
 
 BaChamada est une application smartphone qui va vous permettre de suivre l'évolution de valeurs instantanées de votre Fréquence Cardiaque (FC), exprimée en BPM (acronyme de Battement Par Minute).
 

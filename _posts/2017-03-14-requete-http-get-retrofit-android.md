@@ -1,10 +1,12 @@
 ---
 title: "Faire une requête HTTP GET avec Retrofit en Android"
-categories: coding android tutoriel fr
+categories: coding android serveur fr
 author: macha
 ---
 
-Cet article a été migré vers le blog de ChillCoding: <https://www.chillcoding.com/android-retrofit-send-http/>
+<div class="text-center lead" markdown="1">
+  ![Android HTTP Request](/assets/img/post/android-request.png)
+</div>
 
 Ce tutoriel va vous donner les clés pour faire une requête HTTP GET au format JSON, en Android, avec la librairie [**Retrofit 2.2**](http://square.github.io/retrofit/).
 
@@ -135,9 +137,11 @@ Avec l'attribut de classe _name_ correspondant à un élément de la réponse du
 
   1. Créer l'interface JAVA listant les requêtes à réaliser, ici nous déclarons une seule requête HTTP GET, _listRepos_ :
 
-        public interface GitHubService {
+
+    public interface GitHubService {
         @GET("/users/{user}/repos")
         Call<List<Repo>> listRepos(@Path("user") String user);
     }
+
 
 **Note** : En début de méthode, figure ce qui est attendu du serveur dans un Call, soit une liste de **_Repo_**, _Call<List<Repo>>_. En paramètre de méthode, est placé le(s) paramètre(s) pour la requête, soit l'utilisateur [GitHub](https://api.github.com/).
