@@ -21,6 +21,8 @@ To create native UI in Android, here are some UI elements ordered by type with r
 
 <i class="fa fa-th" aria-hidden="true"></i> [GridLayout](https://android-developers.googleblog.com/2011/11/new-layout-widgets-space-and-gridlayout.html){:target="_blank"}
 
+<i class="fa fa-vcard-o" aria-hidden="true"></i> [ConstraintLayout](https://developer.android.com/training/constraint-layout/index.html){:target="_blank"}
+
 ## <i class="fa fa-th-large" aria-hidden="true"></i> Container
 <i class="fa fa-files-o" aria-hidden="true"></i> [Gallery](https://developer.android.com/reference/android/widget/Gallery.html){:target="_blank"}
 
