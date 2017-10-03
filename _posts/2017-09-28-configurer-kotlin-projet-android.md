@@ -1,5 +1,5 @@
 ---
-title: "Configurer Kotlin dans un projet Android Studio"
+title: "Configurer Kotlin dans un projet Android Studio [AK 2]"
 categories: coding android fr
 author: macha
 ---
@@ -8,7 +8,10 @@ author: macha
   ![Android HTTP Request](/assets/img/post/android-config.png)
 </div>
 
-Ce tutoriel détaille comment configurer _Kotlin_ dans un projet  fraichement créé sous _Android Studio_.
+Ce tutoriel détaille comment configurer _Kotlin_ dans un projet fraichement créé sous _Android Studio_.
+Il faut donc avoir au préalable installer _Android Studio_ avec le dernier _SDK Android_.
+
+Pour plus d'information sur l'introduction du langage _Kotlin_ dans le développement natif _Android_, jetez un oeil à cet article : [Introduction à Kotlin](https://www.chillcoding.com/blog/2017/07/11/android-kotlin-introduction/).
 
 ## Pré-requis : Télécharger le plugin Kotlin
 1. Allez dans la partie `Plugins` d'_Android Studio_
@@ -25,7 +28,8 @@ Ce tutoriel détaille comment configurer _Kotlin_ dans un projet  fraichement cr
 4. Laissez la sélection sur `All modules` depuis la fenêtre `Configure Kotlin with Android with Gradle`, puis cliquez sur `Ok`
 5. Cliquez sur `Sync` depuis la fenêtre jaune relative au fichier _gradle_. Chaque changement apporté dans ces fichiers nécessite une synchronisation du projet
 4. Remarquez les lignes ajoutées dans les fichiers _gradle_
- * dans le fichier _gradle_ du module `build.gradle (Module: app)`
+* dans le fichier _gradle_ du module `build.gradle (Module: app)`
+
 ```
 apply plugin: 'kotlin-android'
 ...
@@ -35,12 +39,14 @@ compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 ...
 }
 ```
- * dans le fichier _gradle_ du projet `build.gradle (Project: MyProject)`
- ```
- ext.kotlin_version = '1.1.4'
- ...
- classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+* dans le fichier _gradle_ du projet `build.gradle (Project: MyProject)`
+
 ```
+ext.kotlin_version = '1.1.4'
+...
+classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+```
+
 Remarque : Une bonne pratique est d'utiliser une variable comme `ext.kotlin_version` contenant le numéro de version à utiliser pour la dépendance  utilisée, ici : `org.jetbrains.kotlin:kotlin-stdlib-jre7`.
 
 Exercice : Ajoutez une variable `ext.support_version` pour les dépendances provenant de `com.android.support`
