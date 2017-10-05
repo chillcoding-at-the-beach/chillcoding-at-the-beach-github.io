@@ -5,7 +5,7 @@ author: macha
 ---
 
 <div class="text-center lead" markdown="1">
-  ![Android HTTP Request](/assets/img/post/android-request.png)
+  ![Android Requête HTTP](/assets/img/post/android-request.png)
 </div>
 
 Dans le cadre de l'enseignement **SQLite** effectué en

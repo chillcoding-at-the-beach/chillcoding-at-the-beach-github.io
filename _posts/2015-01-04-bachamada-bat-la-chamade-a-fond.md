@@ -5,7 +5,7 @@ author: macha
 ---
 
 <div class="text-center lead" markdown="1">
-  ![Android HTTP Request](/assets/img/post/android-love.png)
+  ![Android Coeur](/assets/img/post/android-love.png)
 </div>
 
 _**[BaChamada](https://play.google.com/store/apps/details?id=fr.machada.bpm)**_ est une application vous permettant de _surveiller votre Fréquence Cardiaque_ sur le long terme. Cette application Android vous permet de prendre votre pouls avec _la montre connectée_ (smartwatch d'Android) ou bien à l'aide d'un _chrono _(méthode fiable et reconnue depuis la nuit des temps).

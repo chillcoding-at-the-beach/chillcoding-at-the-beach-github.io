@@ -5,7 +5,7 @@ author: macha
 ---
 
 <div class="text-center lead" markdown="1">
-  ![Android HTTP Request](/assets/img/post/android-wear.png)
+  ![Android Montre connectée](/assets/img/post/android-wear.png)
 </div>
 
 Pour déployer une app. Android Wear, en cours de développement, sur une montre connectée (ou smartwatch), il faut au préalable :

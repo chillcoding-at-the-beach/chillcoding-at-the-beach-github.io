@@ -5,7 +5,7 @@ author: macha
 ---
 
 <div class="text-center lead" markdown="1">
-  ![Android HTTP Request](/assets/img/post/android-view.png)
+  ![Android Vue](/assets/img/post/android-view.png)
 </div>
 
 Dans ce tutoriel, il est expliqué comment créer une simple vue (**View**) personnalisée sous _Android_.

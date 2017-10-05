@@ -5,10 +5,10 @@ author: macha
 ---
 
 <div class="text-center lead" markdown="1">
-  ![Android HTTP Request](/assets/img/post/android-aso.png)
+  ![Android Optimisation sur Play Store](/assets/img/post/android-aso.png)
 </div>
 
-C'est officiel, le _Play Store_ compte plus de deux millions d'applications !
+C'est officiel, la boutique en ligne de _Google_, le _Play Store_, compte plus de deux millions d'applications !
 Dans ce contexte, il est très difficile de sortir du lot. Le livre blanc
 [**Réussir la Publication d'une App Android**]((/subscribe-aso/)) fournit des
 astuces pour donner de la visibilité sur le _Play Store_ à une application.

@@ -5,7 +5,7 @@ author: macha
 ---
 
 <div class="text-center lead" markdown="1">
-  ![Android HTTP Request](/assets/img/post/android-love.png)
+  ![Android Coeur](/assets/img/post/android-love.png)
 </div>
 
 Le pouls est la perception du flux sanguin propulsé par le coeur, il est déterminé en palpant une artère situé au cou (pouls central), au poignet (pouls radial), ou à d'autres endroit sur le corps. La prise de pouls est un témoin de la pression artérielle, elle permet de vérifier la symétrie (gauche, droite) ainsi que d'évaluer de manière simple la fréquence cardiaque et le rythme cardiaque.

@@ -5,7 +5,7 @@ author: macha
 ---
 
 <div class="text-center lead" markdown="1">
-  ![Android HTTP Request](/assets/img/post/android.png)
+  ![Android](/assets/img/post/android.png)
 </div>
 
 Qui n'a pas déjà entendu parler d'Android ? C'est le fameux robot vert présent

@@ -5,7 +5,7 @@ author: macha
 ---
 
 <div class="text-center lead" markdown="1">
-  ![Android HTTP Request](/assets/img/post/android-love.png)
+  ![Android Coeur](/assets/img/post/android-love.png)
 </div>
 
 Bachamada, pour _mon coeur bat la chamade_, est une application disponible sur

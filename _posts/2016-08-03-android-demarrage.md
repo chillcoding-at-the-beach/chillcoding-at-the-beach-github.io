@@ -5,7 +5,7 @@ author: macha
 ---
 
 <div class="text-center lead" markdown="1">
-  ![Android HTTP Request](/assets/img/post/android-config.png)
+  ![Android Configuration](/assets/img/post/android-config.png)
 </div>
 
 Ce tutoriel détaille comment installer un environnement de développement _Android_.
