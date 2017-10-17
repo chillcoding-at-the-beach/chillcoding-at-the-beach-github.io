@@ -251,9 +251,9 @@ Finalement, la bibliothèque _Anko Commons_ offre des fonctions d'extensions et 
 * [Envoyer un email](#email)
 * [Partager du contenu](#share)
 
-Cela dit, il est important de savoir ce qu'il y a sous le capot (`Cmd` ou `Ctrl` + clique :) afin de connaître l'implémentation effectuée à partir du _SDK Android_. Parfois, il est nécessaire de mettre les mains dans le cambouis afin de développer une fonctionnalitée plus évoluée, voir plus complexe. La connaissance du _SDK Android_ est alors bienvenue.
+Cela dit, il est important de savoir ce qu'il y a sous le capot (`Cmd` ou `Ctrl` + clique :) afin de connaître l'implémentation effectuée à partir du _SDK Android_. Parfois, il est nécessaire de mettre les mains dans le cambouis afin de développer une fonctionnalité plus évoluée, voir plus complexe. La connaissance du _SDK Android_ est alors bienvenue.
 
-Aussi, l'utilisation des fonctions _Anko Commons_ peuvent être restreintes à un context spécifique, c'est-à-dire qu'elles peuvent être appelées depuis une <i style='color:green'>Activity</i> ou bien depuis un <i style='color:green'>Fragment</i>. Leur intégration dans une architecture spécifiquement alambiqué n'est alors pas forcément adéquate.
+Aussi, l'utilisation des fonctions _Anko Commons_ peuvent être restreintes à un contexte spécifique, c'est-à-dire qu'elles peuvent être appelées depuis une <i style='color:green'>Activity</i> ou bien depuis un <i style='color:green'>Fragment</i>. Leur intégration dans une architecture spécifiquement alambiqué n'est alors pas forcément adéquate.
 
 
 ### <i class="fa fa-globe" aria-hiden="true"></i> Références :
