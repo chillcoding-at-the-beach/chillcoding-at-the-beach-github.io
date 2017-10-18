@@ -285,9 +285,7 @@ fun Context.share(text: String, subject: String = ""): Boolean {
 }
 ```
 
-<br>
-
-## Retour d'expérience sur _Anko_
+## Retour d'expérience
 Finalement, la bibliothèque _Anko Commons_ offre des fonctions d'extensions
 et autres implémentations _Kotlin_ intéressantes. En particulier, elle permet
 de programmer très rapidement les tâches utilisateurs les plus courantes :
