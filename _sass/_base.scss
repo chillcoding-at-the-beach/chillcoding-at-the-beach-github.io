@@ -183,3 +183,20 @@ aside {
 .label {
   color: $theme-primary;
 }
+
+.brand-chill{
+	font-family:'Open Sans','Helvetica Neue',Arial,sans-serif;
+	text-transform: uppercase;
+	text-transform: none !important;
+  color: black !important;
+}
+.brand-coding{
+	font-weight: 700;
+}
+.brand-o{
+	color: #35E0B4;
+}
+.brand-chill:hover{
+	text-decoration: none;
+	color: #00274a;
+}
