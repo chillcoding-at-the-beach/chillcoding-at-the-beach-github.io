@@ -123,21 +123,6 @@ La formation est basée sur un tronc commun se déroulant sur 3 jours. Ensuite
 
 * Affichage de la liste des pâtisseries _Android_ avec un `RecyclerView`
 
-#### Théorie : Persistance des Données
-
-<ol type="A">
-  <li>Stockage clé-valeur</li>
-  <li>Système de fichiers</li>
-  <li>Base de données _SQLite_</li>
-</ol>
-* Librairie _Realm_
-
-#### Pratique : Enregistrement de Données
-
-* Stockage de données structurées
-
-### Jour 4 : Gestion des Données et Communication Réseau
-
 #### Théorie : Préférences Utilisateur
 
 <ol type="A">
@@ -152,6 +137,21 @@ La formation est basée sur un tronc commun se déroulant sur 3 jours. Ensuite
 * Utilisation des préférences de l’utilisateur (clé-valeur)
 * Création d’un écran de préférence
 * Récupération des valeurs depuis le fichier de préférence
+
+### Jour 4 : Persistance des Données et Communication Réseau
+
+#### Théorie : Persistance des Données
+
+<ol type="A">
+  <li>Stockage clé-valeur</li>
+  <li>Système de fichiers</li>
+  <li>Base de données _SQLite_</li>
+</ol>
+* Librairie _Realm_
+
+#### Pratique : Enregistrement de Données
+
+* Stockage de données structurées
 
 #### Théorie : Communication Réseau
 
