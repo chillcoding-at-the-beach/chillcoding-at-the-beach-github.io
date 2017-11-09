@@ -46,10 +46,20 @@ mobile _Android_ avec le langage _Kotlin_ !
 3. Placez vous dans dans le fichier _gradle_ du module `build.gradle (Module: app)`
 4. Ajoutez la dépendance _Anko Commons_ dans le bloc approprié `dependencies` :
 
+avec AS 2
+
         dependencies {
           ...
           compile "org.jetbrains.anko:anko-common:$anko_version"
         }
+
+avec AS 3
+
+        dependencies {
+          ...
+          implementation "org.jetbrains.anko:anko-common:$anko_version"
+        }
+
 
 À présent, nous allons voir les principales facilitées de développement _Android_
 apportées par cette bibliothèque.
