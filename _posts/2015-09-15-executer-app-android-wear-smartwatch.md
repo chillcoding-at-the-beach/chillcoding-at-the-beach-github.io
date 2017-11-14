@@ -1,6 +1,6 @@
 ---
 title: "Déployer une app. Android Wear sur une smartwatch"
-categories: coding android wear fr
+categories: fr coding tutoriel android wear
 author: macha
 ---
 
@@ -16,6 +16,8 @@ Pour déployer une app. Android Wear, en cours de développement, sur une montre
 Dans ce tutoriel, accompagné d'un screencast, nous allons voir comment préparer un environnement de développement pour Android Wear, soit comment déployer une app. spécialement conçue pour la montre connectée.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o4bqwPQbWRA" frameborder="0" allowfullscreen></iframe>
+
+<!--more-->
 
 ## A] Installer une app., provenant du store officiel, sur une smartwatch
 

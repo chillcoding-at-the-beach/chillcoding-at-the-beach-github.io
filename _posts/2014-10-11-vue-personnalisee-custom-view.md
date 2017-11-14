@@ -1,6 +1,6 @@
 ---
 title: "Créer une vue personnalisée sous Android (Custom View)"
-categories: coding android vue fr
+categories: fr coding tutoriel android vue
 author: macha
 ---
 
@@ -13,6 +13,8 @@ Dans ce tutoriel, il est expliqué comment créer une simple vue (**View**) per
 _**Pré-requis :**_ notion sur l'**Activity** et le **Fragment**
 
 _**Objectif :**_ créer une classe de type **View**, dessinant une image ou un cercle à l'écran.
+
+<!--more-->
 
 ## A] View, quesaco? 
 

@@ -9,6 +9,7 @@ repository_url: https://gitlab.com/chillcoding-at-the-beach/chillcoding-at-the-b
 permalink: /blog/:year/:month/:day/:title/
 paginate: 5
 paginate_path: "/blog/page-:num/"
+excerpt_separator: <!--more-->
 
 google_analytics_id: UA-55688141-5
 

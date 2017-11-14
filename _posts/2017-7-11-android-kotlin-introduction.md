@@ -1,6 +1,6 @@
 ---
 title: "Android : Introduction à Kotlin"
-categories: coding android kotlin fr
+categories: fr coding tutoriel android kotlin
 author: macha
 ---
 
@@ -12,13 +12,15 @@ Le bruit des vagues, le sable fin, les pieds dans l'eau, le soleil sur la peau, 
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/mrJmVjsJlYU" frameborder="0" allowfullscreen></iframe>
 
+<!--more-->
+
 ## Kotlin is here!
 
 Le G des GAFA a officialisé le support du langage _Kotlin_ pour le développement d'application mobile _Android_, cette année 2017, à la fameuse conférence G I/O, les 17-19 mai 2017.
 
 Dans cet article, nous donnerons des éléments de réponses à la question [Pourquoi Kotlin ?](#pourquoi). Aussi, ce langage sera décrit [en bref](#kotlin). Puis, nous verrons son [support dans Android Studio](#android-studio). Enfin, nous nous interrogerons sur l'[avenir d'_Android_](#next).
 
-## <a name="pourquoi"></a><i class="fa fa-google" aria-hidden="true"></i> Pourquoi Kotlin ?
+## <a name="pourquoi"></a>{% icon fa-google %} Pourquoi Kotlin ?
 
 **Mais pourquoi est-il aussi méchant ?** Si vous ne connaissez pas cette référence, je vous invite à aller voir [cette vidéo](https://www.youtube.com/watch?v=EHY4I29jxjo){:target="_blank"} :)
 
@@ -33,38 +35,38 @@ En outre, depuis ses débuts _Android_ copie *Apple*. Le langage *Swift* a été
 
 Enfin, toutes ses histoires de guerre et d'amour force les développeurs _Android_ à sortir de leur zone de confort. En effet, il s'agit de faire une croix sur nos connaissances *Java* pour découvrir un langage merveilleusement prometteur. Cela dit, les acquis sur le SDK _Android_ sont beaucoup plus important que la connaissance d'un langage de programmation.
 
-## <a name="kotlin"></a><i class="fa fa-code" aria-hidden="true"></i> Kotlin en bref
+## <a name="kotlin"></a>{% icon fa-code %} Kotlin en bref
 
 Tout d'abord, _Kotlin_ est un langage de programmation orienté objet et fonctionnel. Il porte le nom d'une île proche de Saint Pétersbourg, la ville où est basée l’équipe de *JetBrains* impliquée dans le développement de ce langage. Cette société a également développer l'IDE (Integrated Development Environment) *IntelliJ*, sur lequel est basé *Android Studio*. *JetBrains* est réputé pour réaliser des produits de qualité.
 
 En bref, voici quelques unes des vertues de _Kotlin_ :
 
-<i class="fa fa-paperclip" aria-hidden="true"></i> Langage peu verbeux : `;` <i class="fa  fa-long-arrow-right" aria-hidden="true"></i> 💚
+{% icon fa-paperclip %} Langage peu verbeux : `;` <i class="fa  fa-long-arrow-right" aria-hidden="true"></i> 💚
 
-<i class="fa fa-paperclip" aria-hidden="true"></i> Langage clair et concis : ~~getter/setter~~, accès direct aux attributs, etc.
+{% icon fa-paperclip %} Langage clair et concis : ~~getter/setter~~, accès direct aux attributs, etc.
 
-<i class="fa fa-paperclip" aria-hidden="true"></i> Affranchissement du `NullPointerException`
+{% icon fa-paperclip %} Affranchissement du `NullPointerException`
 
-<i class="fa fa-paperclip" aria-hidden="true"></i> Interpollation de chaines de charactère : `Log.i(TAG, "my width is $mWidth")`
+{% icon fa-paperclip %} Interpollation de chaines de charactère : `Log.i(TAG, "my width is $mWidth")`
 
-<i class="fa fa-paperclip" aria-hidden="true"></i> Déclaration de variables simplifiée : soit `val` soit `var`
+{% icon fa-paperclip %} Déclaration de variables simplifiée : soit `val` soit `var`
 
-<i class="fa fa-paperclip" aria-hidden="true"></i> Conversion de type automatique : `val mWidth = 0`
+{% icon fa-paperclip %} Conversion de type automatique : `val mWidth = 0`
 
 Concrètement, pour avoir une démonstration du langage _Kotlin_, il suffit de se rendre dans la partie *TRY* du [site officiel](https://try.kotlinlang.org){:target="_blank"}. Puis, vous trouverez des exercices cool dans *Kotlin Koans*.
 
-Et si vous désirez des news sur _Kotlin_, rejoignez le slack [<i class="fa fa-slack" aria-hidden="true"></i> kotlinlang](http://slack.kotlinlang.org/) ou suivez [<i class="fa fa-twitter" aria-hidden="true"></i> @kotlin](https://twitter.com/kotlin).
+Et si vous désirez des news sur _Kotlin_, rejoignez le slack [{% icon fa-slack %} kotlinlang](http://slack.kotlinlang.org/) ou suivez [{% icon fa-twitter %} @kotlin](https://twitter.com/kotlin).
 
 
-## <a name="android-studio"></a><i class="fa fa-android" aria-hidden="true"></i> Android et Kotlin
+## <a name="android-studio"></a>{% icon fa-android %} Android et Kotlin
 
 *AS 3* est sorti, en version de prévisualisation, tout juste pour la G I/O 2017 [\[9\]](#as3). Il supporte le langage _Kotlin_. L'avantage est qu'il peut être installé en parallèle d'une version existante d'*AS*. Les versions stable et *Canary* d'*AS* partagent alors les dossiers d'installation (*SDK Android* et préférences).
 
 D'ailleurs, voici les principaux atouts du support de _Kotlin_ dans *AS 3* :
 
-<i class="fa fa-paperclip" aria-hidden="true"></i> Cohabitation du code *Java* et _Kotlin_
+{% icon fa-paperclip %} Cohabitation du code *Java* et _Kotlin_
 
-<i class="fa fa-paperclip" aria-hidden="true"></i> Conversion automatique du code *Java* vers _Kotlin_ : `Ctrl+C` de code _Java_ `Ctrl+V` dans un fichier _.kt_ ou [Convertir un fichier Java en Kotlin](#convert)
+{% icon fa-paperclip %} Conversion automatique du code *Java* vers _Kotlin_ : `Ctrl+C` de code _Java_ `Ctrl+V` dans un fichier _.kt_ ou [Convertir un fichier Java en Kotlin](#convert)
 
 
 ### Créer un projet Kotlin
@@ -77,16 +79,16 @@ D'ailleurs, voici les principaux atouts du support de _Kotlin_ dans *AS 3* :
 
 Aller dans le menu `Code > Convert Java File to Kotlin File`
 
-## <a name="next"></a><i class="fa fa-calendar" aria-hidden="true"></i> What is next ?
+## <a name="next"></a>{% icon fa-calendar %} What is next ?
 
 Dans l’immédiat, on peut s'attendre à rien parce que c'est l'été. Cela dit la version 8 d’_Android_ devrait sortir en octobre comme les précédentes versions d'_Android_ depuis 2013.
 En général, la sortie d’une nouvelle version n’arrive jamais seule. Elle est souvent accompagnée d'une mise à jour majeure d’*Android Studio*. Pour la rentrée, en octobre, novembre, on peut donc s’attendre à *AS 3* en version stable.
 
-Concernant le nom de la prochaine version O d'_Android_, je parie sur *Orange Cake* 🍊 et vous ? N’hésitez pas à commenter cet article ou la [<i class="fa fa-youtube" aria-hidden="true"></i> vidéo](https://youtu.be/mrJmVjsJlYU){:target="_blank"} pour faire vos propositions. En outre, la présentation correspondante [<i class="fa fa-slideshare" aria-hidden="true"></i> Android - Introduction à Kotlin](https://www.slideshare.net/MachaDACOSTA/android-introduction-kotlin){:target="_blank"} est disponible sur *SlideShare*.
+Concernant le nom de la prochaine version O d'_Android_, je parie sur *Orange Cake* 🍊 et vous ? N’hésitez pas à commenter cet article ou la [{% icon fa-youtube %} vidéo](https://youtu.be/mrJmVjsJlYU){:target="_blank"} pour faire vos propositions. En outre, la présentation correspondante [{% icon fa-slideshare %} Android - Introduction à Kotlin](https://www.slideshare.net/MachaDACOSTA/android-introduction-kotlin){:target="_blank"} est disponible sur *SlideShare*.
 
 En attendant la rentrée je vous souhaite à tous un bel été !
 
-## <a name="references"></a><i class="fa fa-globe" aria-hidden="true"></i> Références :
+## <a name="references"></a>{% icon fa-globe %} Références :
 1. [Langage Java](https://fr.wikipedia.org/wiki/Java_%28langage%29)
 2. <a name="oracle"></a>[API Java : Google a enfreint les brevets d’Oracle, selon la Cour Suprême](http://www.linformaticien.com/actualites/id/37221/categoryid/25/api-java-google-a-enfreint-les-brevets-d-oracle-selon-la-cour-supreme.aspx)
 3. [Android 7 : OpenJDK remplacera les API Java](http://www.linformaticien.com/actualites/id/39052/categoryid/18/android-7-openjdk-remplacera-les-api-java.aspx)

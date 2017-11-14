@@ -1,6 +1,6 @@
 ---
 title: "Bienvenue sur le site de Macha !"
-categories: chillcoding fr
+categories: fr chillcoding
 author: macha
 ---
 
@@ -9,6 +9,8 @@ dans le domaine de l'informatique. Il se compose de 4 parties : **Service**,
 **Portfolio** présentant quelques projets principalement sur mobile, **Android**
 proposant des articles techniques sur la plateforme Android ainsi que des
 statistiques et la partie **Contact** donnant des coordonnées personnelles.
+
+<!--more-->
 
 ## Qui suis-je ?
 

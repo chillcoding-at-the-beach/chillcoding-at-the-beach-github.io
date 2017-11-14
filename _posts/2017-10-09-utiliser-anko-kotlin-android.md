@@ -1,6 +1,6 @@
 ---
 title: "Utiliser la bibliothèque Anko dans un projet Android [AK 4]"
-categories: coding android fr
+categories: fr coding tutoriel android kotlin
 author: macha
 ---
 
@@ -35,6 +35,8 @@ La bibliothèque _Anko_, écrite en _Kotlin_, contient en fait 4 sous bibliothè
 
 _Anko Commons_ est la bibliothèque incontournable pour le développement d'application
 mobile _Android_ avec le langage _Kotlin_ !
+
+<!--more-->
 
 ## Importer la bibliothèque Anko Commons
 

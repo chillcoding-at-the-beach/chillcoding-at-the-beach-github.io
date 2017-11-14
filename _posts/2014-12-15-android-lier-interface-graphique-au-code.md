@@ -1,6 +1,6 @@
 ---
 title: "Android : Lier une interface graphique au code"
-categories: coding android vue fr
+categories: fr coding tutoriel android vue
 author: macha
 ---
 
@@ -15,6 +15,8 @@ Une **Activity** est un composant Android, il possède un cycle de vie (créatio
 Un **Fragment** est une sorte de _sub-Activity, _il possède également un cycle de vie, calé sur celui de l'**Activity** à laquelle il est attaché. D'ailleurs, une **Activity **peut contenir plusieurs **Fragment**s.
 
 Note : Ce composant a été introduit dans la version 2.3 d'Android afin d'optimiser la programmation sur tablette (cf. [site de référence](http://developer.android.com/guide/components/fragments.html)).
+
+<!--more-->
 
 ## A] Activity & View
 

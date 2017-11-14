@@ -1,6 +1,6 @@
 ---
 title: "BaChamada bat la chamade ! sur Android Wear"
-categories: chillcoding android application fr
+categories: fr chillcoding android application
 author: macha
 ---
 
@@ -13,6 +13,8 @@ _**[BaChamada](https://play.google.com/store/apps/details?id=fr.machada.bpm)**_�
 Après avoir allumé votre montre connectée, ou bien rentré le nombre de pulsations comptés, la _valeur de votre Fréquence Cardiaque_ vous est présenté sur une échelle. Elle est exprimée en Battement Par Minute, BPM. Il est indiqué un pourcentage de votre Fréquence Cardiaque par rapport à votre Fréquence Cardiaque Max., ainsi que l'activité physique normale correspondante à votre valeur. Par la prise de votre pouls régulière, votre **Fréquence Cardiaque Min.** et votre **Fréquence Cardiaque Max.** sont automatiquement intégrées à votre profil ! Cela permet d'avoir des indications sur votre valeur de Fréquence Cardiaque plus précises et donc de meilleurs recommandations.
 
 Des _zones de Fréquence Cardiaque_ vous sont présentés, il vous est également possible de les personnaliser via votre _Profil_. Elle vous donne une idée sur la _ Fréquence Cardiaque à ne pas dépasser_ selon l'_activité_ sportive pratiquée (marathon, semi, footing, etc.).
+
+<!--more-->
 
 ## BaChamada en Vidéo
 

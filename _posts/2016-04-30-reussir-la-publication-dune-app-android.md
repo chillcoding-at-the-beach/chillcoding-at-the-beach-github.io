@@ -1,6 +1,6 @@
 ---
 title: "Réussir la Publication d'une App Android"
-categories: chill android aso fr
+categories: fr coding android aso
 author: macha
 ---
 
@@ -10,8 +10,10 @@ author: macha
 
 C'est officiel, la boutique en ligne de _Google_, le _Play Store_, compte plus de deux millions d'applications !
 Dans ce contexte, il est très difficile de sortir du lot. Le livre blanc
-[**Réussir la Publication d'une App Android**]((/subscribe-aso/)) fournit des
+[**Réussir la Publication d'une App Android**](/subscribe-aso/) fournit des
 astuces pour donner de la visibilité sur le _Play Store_ à une application.
+
+<!--more-->
 
 ## L'ABC pour Réussir la Publication d'une App Android
 
@@ -22,8 +24,8 @@ tout en respectant l’utilisateur et ses intérêts. La présentation _L'ABC 
 Réussir la Publication d'une App Android_ et le livre blanc _Réussir la
 Publication d'une App Android_ détaillent des techniques d’_App Store
 Optimization_ mis en application sur l'app
-**[BaChamada](/2015/01/04/bachamada-bat-la-chamade-a-fond/)** qui
-[dépasse à présent les 1000 téléchargements](2016/06/21/bachamada-a-atteint-les-1000-telechargements/) !
+**[BaChamada](/blog/2015/01/04/bachamada-bat-la-chamade-a-fond/)** qui
+[dépasse à présent les 1000 téléchargements](/blog/2016/06/21/bachamada-a-atteint-les-1000-telechargements/) !
 
 N'attendez plus pour [télécharger "L'ABC pour Réussir la Publication d'une App
 Android" gratuitement](/subscribe-aso/)!

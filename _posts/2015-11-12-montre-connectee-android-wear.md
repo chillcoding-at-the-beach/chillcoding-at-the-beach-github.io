@@ -1,6 +1,6 @@
 ---
 title: "De bons présages pour Android Wear"
-categories: chill android wear fr
+categories: fr chillcoding android wear
 author: macha
 ---
 
@@ -19,6 +19,8 @@ quelle montre.
 Les premières montres connectées Android ont vu le jour en juin 2014 avec la _Samsung Galaxy Gear Live_ et la _LG  G Watch_. Elles ont été suivies par la _Moto 360_ de _Motorola_, la _Zen Watch_ d'_Asus_, etc. D'une part, les constructeurs font la course pour sortir la smartwatch avec la batterie la plus performante à un prix accessible. D'autre part, les développeurs s'affairent pour sortir des applications innovantes.
 
 Dans cet article, il est sondé le marché des smartwatchs à partir de chiffres clés relevés dans différentes études, ils montrent la taille du marché et les tendances à venir.
+
+<!--more-->
 
 ## 4 000 000 smartwatchs Android vendues d'ici 2015
 

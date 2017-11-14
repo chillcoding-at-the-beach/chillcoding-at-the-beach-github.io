@@ -1,6 +1,6 @@
 ---
 title: "Top 6 des raccourcis dans Android Studio"
-categories: coding android fr
+categories: fr coding android
 author: macha
 ---
 
@@ -9,6 +9,8 @@ author: macha
 </div>
 
 Cet article présente une sélection de raccourcis clavier sur Android Studio pour augmenter votre rapidité de développement.
+
+<!--more-->
 
 1. Aller sur la classe ou l'élément : Cmd/Ctrl+click sur l'élément
 2. Indenter le code et revoir les imports : Cmd/Ctrl+Alt+L

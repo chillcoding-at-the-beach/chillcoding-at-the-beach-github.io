@@ -1,6 +1,6 @@
 ---
 title: "BaChamada sur PlayStore"
-categories: chillcoding android application fr
+categories: fr chillcoding android application
 author: macha
 ---
 
@@ -11,6 +11,8 @@ author: macha
 BaChamada est une application smartphone qui va vous permettre de suivre l'évolution de valeurs instantanées de votre Fréquence Cardiaque (FC), exprimée en BPM (acronyme de Battement Par Minute).
 
 L'intérêt est d'analyser vos performances sportives ou de surveiller votre santé cardiaque : plus vous ferez des exercices, plus votre pouls sera bas. Par ailleurs, des zones de Fréquence Cardiaque, personnalisées selon vos valeurs, vous sont présentées afin de vous donner des indications sur la FC à maintenir selon la course pratiquée (randonnée, footing, marathon, fractionné,...).
+
+<!--more-->
 
 Suite à un effort physique intense, le matin au réveil ou à un moment de la journée, il vous est possible de prendre manuellement votre pouls (au niveau de votre carotide, poignet, poitrine ou bien n'importe où sur votre corps). Placez une main sur votre carotide, par exemple, puis lancez le chronomètre quand vous êtes prêt à compter vos pulsations, il ne vous reste plus qu'à entrer le nombre de battements comptés. Et vous connaîtrez votre fréquence cardiaque ! De cette façon, il vous est possible de surveiller des valeurs clés de votre FC tel que la FC Min (FC au repos, obtenue le matin au réveil) et la FC Max (FC Maximum, obtenue après un effort intense).
 

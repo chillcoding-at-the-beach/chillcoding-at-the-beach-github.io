@@ -1,10 +1,12 @@
 ---
 title: "GatHaba sur Play Store"
-categories: android chillcoding fr
+categories: fr chillcoding android
 author: macha
 ---
 
 GatHaba est une application Android cliente du service GitHub. Elle permet de suivre des répertoires de plusieurs utilisateurs GitHub, ceci sans avoir à créer de compte. Il est possible d'ajouter les répertoires d'un utilisateur GitHub via le menu Ajouter, ensuite il s'agit de choisir les répertoires à suivre. Une vue détaillé de chaque répertoire est disponible, dans laquelle il est présenté la description du projet, le langage technique,  la taille en byte, le nombre de star, et la date du dernier push.
+
+<!--more-->
 
 ## GatHaba en image
 

@@ -1,6 +1,6 @@
 ---
 title: "Ajouter les extensions Kotlin pour accéder facilement aux éléments de la vue [AK 3]"
-categories: coding android fr
+categories: fr coding tutoriel android kotlin
 author: macha
 ---
 
@@ -9,6 +9,8 @@ author: macha
 </div>
 
 Ce tutoriel détaille comment ajouter les extensions _Kotlin_ dans un projet _Android Studio_, d'ores déjà configuré avec _Kotlin_ (cf. [Configurer _Kotlin_ dans un projet _Android Studio_ [AK 2]][AK-2]). Cela afin d'accéder facilement aux éléments de la vue, déclarée dans un fichier _XML_.
+
+<!--more-->
 
 ## Pré-requis : Savoir lier une vue à une activité
 

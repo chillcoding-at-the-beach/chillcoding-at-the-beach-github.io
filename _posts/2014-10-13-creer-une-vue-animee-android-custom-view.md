@@ -1,6 +1,6 @@
 ---
 title: "Créer une vue animée sous Android (Custom View : the best part)"
-categories: coding android vue fr
+categories: fr coding tutoriel android vue
 author: macha
 ---
 
@@ -15,6 +15,8 @@ _**Pré-requis :**_ notion sur l'**Activity**, **Fragment** et la **View**
 (cf. [Créer une vue personnalisée sous Android](/blog/2014/10/11/vue-personnalisee-custom-view/))
 
 _**Objectif :**_ créer une classe de type **View** présentant des objets animés.
+
+<!--more-->
 
 ## A] Runnable, quesaco?
 
