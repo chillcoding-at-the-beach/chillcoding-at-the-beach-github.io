@@ -4,7 +4,7 @@
 
 {% for page in site.posts %}
   {% if page.categories contains include.name %}
-    {% include post-content.html context='home' %}
+    {% include post_content.html context='home' %}
     <hr />
   {% endif %}
 {% endfor %}
