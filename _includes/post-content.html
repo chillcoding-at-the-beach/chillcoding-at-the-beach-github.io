@@ -1,5 +1,6 @@
 {% assign author = site.data.members[page.author] %}
 {% capture twitter_link %}{{ author.twitter | prepend: "https://twitter.com/" }}{% endcapture %}
+{% capture edit_link %}{{ site.repository_url }}/edit/master/{{ page.path }}{% endcapture %}
 
 <article class="{{ include.context }}">
   {% if include.context == 'home' %}
@@ -54,12 +55,29 @@
       <div class="excerpt lead"><a href="{{ page.url }}" class="permalink" title="Permalink">{{ page.excerpt | markdownify }}</a></div>
     {% else %}
       {{ page.content | markdownify }}
+      <p>
+        {% if page.categories contains 'fr' %}
+          <a href='https://twitter.com/intent/tweet?text="{{ page.title }}"&via={{ site.data.members["company"].twitter }}&url={{ site.url }}{{ page.url }}' target="_blank">Partagez</a>
+          ou <a href="https://twitter.com/intent/tweet?text=@{{ author.twitter }} &url={{ site.url }}{{ page.url }}" target="_blank">réagissez</a> sur Twitter.
+        {% else %}
+          <a href='https://twitter.com/intent/tweet?text="{{ page.title }}"&via={{ site.data.members["company"].twitter }}&url={{ site.url }}{{ page.url }}' target="_blank">share</a>
+          or <a href="https://twitter.com/intent/tweet?text=@{{ author.twitter }} &url={{ site.url }}{{ page.url }}" target="_blank">react</a> on Twitter.
+        {% endif %}
+      </p>
+      <p>
+        {% if page.categories contains 'fr' %}
+          <em>Vous avez trouvé une erreur ou voulez améliorer cet article ? <a href="{{ edit_link }}" target="_blank">Editez le directement</a> !</em>
+        {% else %}
+          <em>Found a typo or want to improve this post? <a href="{{ edit_link }}" target="_blank">Edit it directly</a>!</em>
+        {% endif %}
+      </p>
     {% endif %}
+
     <p>
-      <a href='https://twitter.com/intent/tweet?text="{{ page.title }}"&via={{ site.data.members["company"].twitter }}&url={{ site.url }}{{ page.url }}' target="_blank">Share</a> or <a href="https://twitter.com/intent/tweet?text=@{{ author.twitter }} &url={{ site.url }}{{ page.url }}" target="_blank">React</a> on Twitter.
+      {{ icon fa-comment }}<a href="{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.id }}">Comments</a>
     </p>
-    <p>
-      <em>Have a comment? Open a <a href="{{ site.repository_url }}/edit/master/{{ page.path }}" target="_blank">merge request</a>!</em>
-    </p>
+    {% if include.context == 'post' %}
+      {% include post_comments.html %}
+    {% endif %}
   </div>
 </article>
