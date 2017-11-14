@@ -1,6 +1,6 @@
 ---
 title: "Configurer Kotlin dans un projet Android Studio [AK 2]"
-categories: coding android fr
+categories: fr coding tutoriel android kotlin
 author: macha
 ---
 
@@ -11,9 +11,12 @@ author: macha
 Ce tutoriel détaille comment configurer _Kotlin_ dans un projet fraichement créé sous _Android Studio_.
 Il faut donc avoir au préalable installer _Android Studio_ avec le dernier _SDK Android_.
 
-Pour plus d'information sur l'introduction du langage _Kotlin_ dans le développement natif _Android_, jetez un oeil à cet article : [Introduction à Kotlin](https://www.chillcoding.com/blog/2017/07/11/android-kotlin-introduction/).
+Pour plus d'information sur l'introduction du langage _Kotlin_ dans le développement natif _Android_, jetez un oeil à cet article : [Introduction à Kotlin](/blog/2017/07/11/android-kotlin-introduction/).
+
+<!--more-->
 
 ## Pré-requis : Télécharger le plugin Kotlin
+
 1. Allez dans la partie `Plugins` d'_Android Studio_
   * Accédez au menu `Recherche` du logiciel
   * Tapez plugin puis sélectionnez `Plugins`, situé en bas dans la partie `Actions`
@@ -22,6 +25,7 @@ Pour plus d'information sur l'introduction du langage _Kotlin_ dans le développ
 4. Redémarrez AS
 
 ## Configurer Kotlin dans votre projet
+
 1. Allez dans la partie `Tools`, situé dans la barre du menu textuel d'entête
 2. Puis dans `Kotlin`, sélectionnez `Configure Kotlin in project`
 3. Choisissez `Android with Gradle` dans la fenêtre `Choose Configurator`

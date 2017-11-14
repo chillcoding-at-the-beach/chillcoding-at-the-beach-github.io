@@ -1,6 +1,6 @@
 ---
 title: "Faire une requête HTTP POST avec Retrofit en Android"
-categories: coding android serveur fr
+categories: fr coding tutoriel android serveur
 author: macha
 ---
 
@@ -14,6 +14,8 @@ JSON, en Android, avec la librairie [**Retrofit 2.0**](http://square.github.io/r
 Tout d'abord, il faut au préalable avoir [Configurer un projet Android pour utiliser la librairie Retrofit](utiliser-la-librairie-retrofit-dans-une-application-android/).
 
 Ensuite, il s'agit de faire la requête HTTP POST. En particulier, nous nous intéressons à envoyer un objet au format JSON à un serveur distant.
+
+<!--more-->
 
 ## Créer la classe JAVA relative à l'objet JSON à envoyer
 

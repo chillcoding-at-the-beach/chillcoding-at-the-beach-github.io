@@ -1,6 +1,6 @@
 ---
 title: "Pouls, fréquence ou rythme cardiaque?"
-category: chill
+categories: fr chill
 author: macha
 ---
 
@@ -13,6 +13,8 @@ Le pouls est la perception du flux sanguin propulsé par le coeur, il est déter
 La fréquence cardiaque (FC) est le nombre de pulsation par unité de temps. Elle s'exprime généralement en bpm soit battement par minute. C'est une notion quantitative alors que le rythme cardiaque (RC) est une notion qualitative. En effet, il désigne la manière dont s'enchaine les pulsations (par exemple : deux pulsations rapprochées suivies d'une éloignée).
 
 La prise de pouls donne une valeur de FC. Pour se faire, il suffit de placer une main sur une artère du sujet, puis de compter le nombre de pulsations, sur 10 secondes par exemple. Ensuite, la multiplication par 6, du résultat précedemment obtenu,  renvoie la valeur de la FC en bpm.
+
+<!--more-->
 
 ## Comment la FC varie-t-elle ?
 

@@ -9,7 +9,7 @@ stages:
   services:
     - docker:dind
   variables:
-    CURRENT_IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+    CURRENT_IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
     LATEST_IMAGE_TAG: $CI_REGISTRY_IMAGE:latest
     DOCKER_DRIVER: overlay
   before_script:

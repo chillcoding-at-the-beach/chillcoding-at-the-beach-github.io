@@ -1,6 +1,6 @@
 ---
 title: "Big Cookie Strategy"
-categories: coding en
+categories: en coding mobile
 author: macha
 ---
 
@@ -9,6 +9,8 @@ author: macha
 </div>
 
 This post is about the Big Cookie Strategy in particular the Big Cookie Model. The goal is to optimise exchange between a server and a mobile application. It has been elaborated based on real life study case, far away of perfect development context where connectivity is of very high quality.
+
+<!--more-->
 
 ## What is the Big Cookie Strategy?
 
@@ -34,9 +36,7 @@ For instance, following are different data set depending on the connectivity:
 | <i class="fa fa-wifi" aria-hiden="true"></i> Wifi | Info since 15 days |
 
 
-
-
-## <i class="fa fa-globe" aria-hiden="true"></i> Resources:
+## {% icon fa-globe %} Resources:
 
 * [Gerardnico, 2016 - Data Transfert by Gerardnico](http://gerardnico.com/wiki/android/data_transfer)
 * [Ralp Pina, 2015 - Efficient data transfer in Android (Slides)](http://www.slideshare.net/CotapEng/efficient-data-transfer-tech-talk)

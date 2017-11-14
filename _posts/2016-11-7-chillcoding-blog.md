@@ -1,6 +1,6 @@
 ---
 title: "Blog de ChillCoding"
-categories: chillcoding fr
+categories: fr chillcoding
 author: macha
 ---
 
@@ -11,6 +11,8 @@ author: macha
 Comme vous nous l'avez réclamé, nous vous présentons le blog de ChillCoding. Il
 a pour vocation de communiquer ouvertement sur [ChillCoding](/blog/chillcoding/),
 entre [Chill](/blog/chill/) et [Coding](/blog/coding/).
+
+<!--more-->
 
 ## Pourquoi créer une nouvelle société ?
 

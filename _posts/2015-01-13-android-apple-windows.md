@@ -1,6 +1,6 @@
 ---
 title: "Play Store, App Store et les autres !"
-categories: coding android tutoriel fr
+categories: fr coding tutoriel android
 author: macha
 ---
 
@@ -13,6 +13,8 @@ Ce qui suit présente les 4 principaux acteurs du marché mobile : **Apple**,
 **Android**,  **Windows Phone** et **BlackBerry** en termes de terminaux mobile,
 de chiffres clés sur leur boutique en ligne et de succès dans les différents
 pays du monde.
+
+<!--more-->
 
 ## A] Apple, Samsung, Windows Phone, Blackberry  ?
 

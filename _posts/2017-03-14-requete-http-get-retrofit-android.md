@@ -1,6 +1,6 @@
 ---
 title: "Faire une requête HTTP GET avec Retrofit en Android"
-categories: coding android serveur fr
+categories: fr coding tutoriel android serveur
 author: macha
 ---
 
@@ -9,6 +9,8 @@ author: macha
 </div>
 
 Ce tutoriel va vous donner les clés pour faire une requête HTTP GET au format JSON, en Android, avec la librairie [**Retrofit 2.2**](http://square.github.io/retrofit/).
+
+<!--more-->
 
 Tout d’abord, il faut au préalable importer, dans le projet Android, la librairie [**Retrofit 2.2**](http://square.github.io/retrofit/), un convertisseur de requête, et la librairie Okhttp afin d'assurer la retro-compatibilité :
 

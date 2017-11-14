@@ -1,6 +1,6 @@
 ---
 title: "L'extraordinaire Humanoïde !"
-categories: chillcoding android fr
+categories: fr chillcoding android
 author: macha
 ---
 
@@ -20,6 +20,8 @@ pour voiture, pour maison, ou pour réfrigérateur.
 
 Cet incroyable bonhomme vert a pu s'installer sur plusieurs planètes grâce à son
 squelette adaptable à n'importe quel robot des divers régiments.
+
+<!--more-->
 
 ## Que trouve-t-on sous le capot de ce bonhomme vert ?
 

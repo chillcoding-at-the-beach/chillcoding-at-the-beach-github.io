@@ -1,6 +1,6 @@
 ---
 title: "Configurer un projet Android pour utiliser Retrofit"
-categories: coding android serveur fr
+categories: fr coding tutoriel android serveur
 author: macha
 ---
 
@@ -14,6 +14,8 @@ sur les librairies Android permettant de faire des requêtes HTTP (cf.
 [question "What is the best library to make HTTP calls from Java/Android" sur Quora](https://www.quora.com/What-is-the-best-library-to-make-HTTP-calls-from-Java-Android))
 m'a orienté vers la librairie [**Retrofit**](http://square.github.io/retrofit/)
 pour le transfert de données textuelles (hors chargement d'image).
+
+<!--more-->
 
 ## Importer les librairies nécessaires dans Android Studio
 

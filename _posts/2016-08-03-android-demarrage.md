@@ -1,6 +1,6 @@
 ---
 title: "Installer un environnement de développement Android"
-categories: coding android fr
+categories: fr coding tutoriel android
 author: macha
 ---
 
@@ -22,7 +22,10 @@ Par exemple, une application utilisant de manière intensive le _CPU_, ou bien u
 
 Dans la suite, nous nous concentrerons sur le développement d'application _Android_, avec le langage _Kotlin_, dans _Android Studio_.
 
+<!--more-->
+
 ## Télécharger Android Studio
+
 1. Allez sur le site de référence Android : [developer.android.com](https://developer.android.com/){:target="_blank"}
 2. Puis dans la partie _DEVELOP_ > _Android Studio_
 3. Téléchargez AS

@@ -1,6 +1,6 @@
 ---
 title: "Publier une app. Android Wear sur le Play Store"
-categories: coding android publication fr
+categories: fr coding tutoriel android publication
 author: macha
 ---
 
@@ -13,6 +13,8 @@ plus qu'à la publier. Attention, cela peut prendre plusieurs heures ! En
 comparaison avec les app. pour smartphone, les app. pour smartwatch passent une
 batterie de tests plus complexe avant d'être acceptées et disponibles sur le
 Play Store.
+
+<!--more-->
 
 ## Comment soumettre une app. Android Wear avec succès ?
 
