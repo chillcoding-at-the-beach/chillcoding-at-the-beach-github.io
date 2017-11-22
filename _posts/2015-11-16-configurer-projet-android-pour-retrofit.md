@@ -1,6 +1,6 @@
 ---
 title: "Configurer un projet Android pour utiliser Retrofit"
-categories: fr coding tutoriel android serveur
+categories: fr coding tutoriel android-serveur
 author: macha
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Réussir la Publication d'une App Android"
-categories: fr coding android aso
+categories: fr coding android-aso
 author: macha
 ---
 

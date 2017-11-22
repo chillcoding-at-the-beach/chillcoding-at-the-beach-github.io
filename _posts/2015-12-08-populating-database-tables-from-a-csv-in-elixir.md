@@ -1,6 +1,6 @@
 ---
 title: "Populating database tables from a CSV in Elixir"
-categories: en coding tutorial web elixir
+categories: en coding tutoriel web elixir
 author: remy
 ---
 

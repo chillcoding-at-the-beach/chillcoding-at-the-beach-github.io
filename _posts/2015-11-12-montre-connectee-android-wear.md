@@ -1,6 +1,6 @@
 ---
 title: "De bons présages pour Android Wear"
-categories: fr chillcoding android wear
+categories: fr chillcoding android-wear
 author: macha
 ---
 

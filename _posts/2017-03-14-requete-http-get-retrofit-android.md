@@ -1,6 +1,6 @@
 ---
 title: "Faire une requête HTTP GET avec Retrofit en Android"
-categories: fr coding tutoriel android serveur
+categories: fr coding tutoriel android-serveur
 author: macha
 ---
 

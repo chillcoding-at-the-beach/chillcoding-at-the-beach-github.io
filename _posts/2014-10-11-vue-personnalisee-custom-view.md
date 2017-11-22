@@ -1,6 +1,6 @@
 ---
 title: "Créer une vue personnalisée sous Android (Custom View)"
-categories: fr coding tutoriel android vue
+categories: fr coding tutoriel android-vue
 author: macha
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Communication Client/Serveur
-categories: fr coding android serveur
+categories: fr coding android-serveur
 author: macha
 ---
 

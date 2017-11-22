@@ -1,6 +1,6 @@
 ---
 title: "Android : Lier une interface graphique au code"
-categories: fr coding tutoriel android vue
+categories: fr coding tutoriel android-vue
 author: macha
 ---
 
