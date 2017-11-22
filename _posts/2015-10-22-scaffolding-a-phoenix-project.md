@@ -1,6 +1,6 @@
 ---
 title: "Scaffolding a Phoenix project"
-categories: en coding tutorial web elixir phoenix
+categories: en coding tutoriel web elixir phoenix
 author: remy
 ---
 

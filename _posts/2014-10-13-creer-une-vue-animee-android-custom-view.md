@@ -1,6 +1,6 @@
 ---
 title: "Créer une vue animée sous Android (Custom View : the best part)"
-categories: fr coding tutoriel android vue
+categories: fr coding tutoriel android-vue
 author: macha
 ---
 

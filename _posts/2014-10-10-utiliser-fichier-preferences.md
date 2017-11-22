@@ -1,6 +1,6 @@
 ---
 title: "Utiliser le fichier de Préférences dans une application Android"
-categories: fr coding tutoriel android BDD
+categories: fr coding tutoriel android-bdd
 author: macha
 ---
 

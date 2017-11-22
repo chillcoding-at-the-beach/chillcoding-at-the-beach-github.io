@@ -1,6 +1,6 @@
 ---
 title: "Bootstrapping the Maldòn project"
-categories: en coding tutorial web elixir phoenix
+categories: en coding tutoriel web elixir phoenix
 author: remy
 date: 2016-10-02 00:00
 ---

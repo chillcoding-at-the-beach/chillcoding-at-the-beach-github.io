@@ -1,6 +1,6 @@
 ---
 title: "Déployer une app. Android Wear sur une smartwatch"
-categories: fr coding tutoriel android wear
+categories: fr coding tutoriel android-wear
 author: macha
 ---
 

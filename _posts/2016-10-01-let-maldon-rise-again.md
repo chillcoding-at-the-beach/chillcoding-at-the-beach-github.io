@@ -1,6 +1,6 @@
 ---
 title: "Let Maldòn rise again!"
-categories: en coding tutorial web elixir phoenix
+categories: en coding tutoriel web elixir phoenix
 author: remy
 date: 2016-10-01 14:00
 ---
