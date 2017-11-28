@@ -9,29 +9,31 @@ author: macha
 </div>
 
 Ce tutoriel explique comment configurer un projet Android pour utiliser la
-librairie [**Retrofit 2.0**](http://square.github.io/retrofit/). Une brève étude
-sur les librairies Android permettant de faire des requêtes HTTP (cf.
-[question "What is the best library to make HTTP calls from Java/Android" sur Quora](https://www.quora.com/What-is-the-best-library-to-make-HTTP-calls-from-Java-Android))
-m'a orienté vers la librairie [**Retrofit**](http://square.github.io/retrofit/)
-pour le transfert de données textuelles (hors chargement d'image).
+bibliothèque [**Retrofit 2.0**][Retrofit]. Une brève étude
+sur les dépendances Android permettant de faire des requêtes HTTP (cf.
+[question "What is the best library to make HTTP calls from Java/Android" sur Quora][Quora])
+m'a orienté vers les travaux de Jake Wharton, pour le transfert de données textuelles (hors chargement d'image).
 
-<!--more-->
 
-## Importer les librairies nécessaires dans Android Studio
+## Importer les bibliothèques nécessaires dans Android Studio
 
-Il s'agit d'importer la librairie [**Retrofit**](http://square.github.io/retrofit/) développée par [_Square_](http://square.github.io). De plus, depuis la version 2 de **Retrofit**, il faut également importer un convertisseur de requête pour le format utilisé, JSON dans notre cas.
 
-  1. Dans le fichier gradle de votre projet _Android Studio_, celui lié au module _app/_,  importer la librairie [**Retrofit**](http://square.github.io/retrofit/) :
+Il s'agit d'importer [**Retrofit**][Retrofit] développée par [_Square_][Square]. De plus, depuis la version 2 de **Retrofit**, il faut également importer un convertisseur de requête pour le format utilisé, JSON dans notre cas.
 
-        dependencies {
-    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
-    }
+  1. Dans le fichier gradle de votre projet _Android Studio_, celui lié au module _app/_,  importer la dépendances [**Retrofit**][Retrofit] :
 
-  2. Importer également un convertisseur JSON, soit la librairie _converter-gson_ :
+          dependencies {
+            ...
+            compile "com.squareup.retrofit2:retrofit:$retrofit_version"
+          }
+  avec, au 22 novembre 20017 : (prenez la dernière version figurant dans la partie gradle du site )
+          ext.retrofit_version = '2.3.0'
 
-        compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+  2. Importer également un convertisseur JSON, soit la bibliothèque _converter-moshi_ (prenez la dernière version indiqué sur le [site github][Moshi]):
+          compile "com.squareup.retrofit2:converter-moshi:$retrofit_version"
 
-Il existe d'autres convertisseurs, voici la liste proposé par [_Square_](http://square.github.io) :
+
+Il existe d'autres convertisseurs, voici la liste proposé par [_Square_][Square] :
 
   * [Gson](https://github.com/google/gson): `com.squareup.retrofit:converter-gson` (JSON)
   * [Jackson](http://wiki.fasterxml.com/JacksonHome): `com.squareup.retrofit:converter-jackson` (JSON)
@@ -42,11 +44,25 @@ Il existe d'autres convertisseurs, voici la liste proposé par [_Square_](http:/
  
 ## Ajouter les permissions de se connecter à Internet
 
-Afin de pouvoir executer des requêtes HTTP sur un serveur distant, il faut également ajouter, à l'application Android, les permissions de se connecter à Internet.
+Afin de pouvoir exécuter des requêtes HTTP sur un serveur distant, il faut également ajouter, à l'application Android, les permissions de se connecter à Internet.
 
-  1. Dans le fichier Manifest de votre projet _Android Studio_, ajouter :
+  1. Dans le fichier Manifest de votre projet _Android Studio_, ajouter
+  la permission internet :
 
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-  Finalement, dans ce tutoriel, il est expliqué comment importer les librairies de **[Retrofit](http://square.github.io/retrofit/)**, pour le transfert HTTP, avec le format JSON, dans un projet Android. Ceci peut facilement être transposé pour l'import d'autres librairies. De plus, à présent vous pouvez réaliser des requêtes[ HTTP GET](requete-http-get-retrofit-android/) et [HTTP POST](http://www.machada.fr/requete-http-post-retrofit-android/), avec **[Retrofit](http://square.github.io/retrofit/)** dans une application Android.
+Note : Les permissions sont placées dans la balise `manifest` et hors de la balise `application` (juste avant la balise application).
+
+Finalement, dans ce tutoriel, il est expliqué comment importer les bibliothèques de **[Retrofit 2][Retrofit]**, pour le transfert HTTP, avec le format JSON et le convertisseur [Moshi][Moshi] dans un projet Android.
+
+À présent vous pouvez réaliser des requêtes[ HTTP GET](requete-http-get-retrofit-android/) et [HTTP POST](http://www.machada.fr/requete-http-post-retrofit-android/), avec **[Retrofit 2][Retrofit]** dans une application Android.
+
+### <i class="fa fa-globe" aria-hiden="true"></i> Références :
+
+[Retrofit]: http://square.github.io/retrofit/
+[Square]: http://square.github.io
+[Quora]: https://www.quora.com/What-is-the-best-library-to-make-HTTP-calls-from-Java-Android
+[Moshi]: https://github.com/square/moshi
+[Get]: https://www.chillcoding.com/blog/2017/03/14/requete-http-get-retrofit-android/
+[Post]: https://www.chillcoding.com/blog/2015/11/16/requete-http-post-retrofit-android/
