@@ -1,6 +1,6 @@
 ---
-title: "Faire une requête HTTP GET avec Retrofit en Android"
-categories: fr coding tutoriel android-serveur
+title: "Faire une requête HTTP GET avec Retrofit en Kotlin Android"
+categories: fr coding tutoriel android-serveur kotlin
 author: macha
 ---
 
@@ -8,142 +8,248 @@ author: macha
   ![Android HTTP Request](/assets/img/post/android-request.png)
 </div>
 
-Ce tutoriel va vous donner les clés pour faire une requête HTTP GET au format JSON, en Android, avec la librairie [**Retrofit 2.2**](http://square.github.io/retrofit/).
+Ce tutoriel va vous donner les clés pour faire une requête **HTTP GET** au format **JSON**,
+en _Android_, avec la bibliothèque [_Retrofit V2_][Retrofit],
+sous le langage _Kotlin_.
 
-<!--more-->
+## Importer Retrofit et Moshi dans le projet Android
 
-Tout d’abord, il faut au préalable importer, dans le projet Android, la librairie [**Retrofit 2.2**](http://square.github.io/retrofit/), un convertisseur de requête, et la librairie Okhttp afin d'assurer la retro-compatibilité :
-
-
-    compile 'com.squareup.okhttp3:okhttp:3.6.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
-    compile 'com.squareup.retrofit2:retrofit:2.2.0'
-
-
-Ensuite, il s’agit de faire la requête HTTP GET. En particulier, nous nous intéressons à récupérer un objet au format JSON depuis un serveur distant.
-
-## Créer la classe JAVA relative à l'objet JSON à récupérer
-
-Par exemple, nous souhaitons récupérer la liste des répertoires d'un utilisateur [GitHub](https://api.github.com/). La requête permettant d'obtenir la liste de repertoires est _<https://api.github.com/users/machadacosta/repos>._ Avec [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop), l'execution de cette requête renvoie :
+Tout d’abord, il faut au préalable importer, dans le projet _Android_, la
+dépendance [_Retrofit 2_][Retrofit], ainsi qu'un convertisseur de requête,
+et la bibliothèque [_OkHttp_][Okhttp] afin d'assurer la retro-compatibilité :
 
 
-    [
-    {
-    "id": 39936429,
-    "name": "bachamada",
-    "full_name": "machadaCosta/bachamada",
-    "owner": {
-    "login": "machadaCosta",
-    "id": 2046403,
-    "avatar_url": "https://avatars.githubusercontent.com/u/2046403?v=3",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/machadaCosta",
-    "html_url": "https://github.com/machadaCosta",
-    "followers_url": "https://api.github.com/users/machadaCosta/followers",
-    "following_url": "https://api.github.com/users/machadaCosta/following{/other_user}",
-    "gists_url": "https://api.github.com/users/machadaCosta/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/machadaCosta/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/machadaCosta/subscriptions",
-    "organizations_url": "https://api.github.com/users/machadaCosta/orgs",
-    "repos_url": "https://api.github.com/users/machadaCosta/repos",
-    "events_url": "https://api.github.com/users/machadaCosta/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/machadaCosta/received_events",
-    "type": "User",
-    "site_admin": false
-    },
-    "private": false,
-    "html_url": "https://github.com/machadaCosta/bachamada",
-    "description": "This project is about monitoring Heart Rate, in Beat Per Minute (BPM), with an Android App.",
-    "fork": false,
-    "url": "https://api.github.com/repos/machadaCosta/bachamada",
-    "forks_url": "https://api.github.com/repos/machadaCosta/bachamada/forks",
-    "keys_url": "https://api.github.com/repos/machadaCosta/bachamada/keys{/key_id}",
-    "collaborators_url": "https://api.github.com/repos/machadaCosta/bachamada/collaborators{/collaborator}",
-    "teams_url": "https://api.github.com/repos/machadaCosta/bachamada/teams",
-    "hooks_url": "https://api.github.com/repos/machadaCosta/bachamada/hooks",
-    "issue_events_url": "https://api.github.com/repos/machadaCosta/bachamada/issues/events{/number}",
-    "events_url": "https://api.github.com/repos/machadaCosta/bachamada/events",
-    "assignees_url": "https://api.github.com/repos/machadaCosta/bachamada/assignees{/user}",
-    "branches_url": "https://api.github.com/repos/machadaCosta/bachamada/branches{/branch}",
-    "tags_url": "https://api.github.com/repos/machadaCosta/bachamada/tags",
-    "blobs_url": "https://api.github.com/repos/machadaCosta/bachamada/git/blobs{/sha}",
-    "git_tags_url": "https://api.github.com/repos/machadaCosta/bachamada/git/tags{/sha}",
-    "git_refs_url": "https://api.github.com/repos/machadaCosta/bachamada/git/refs{/sha}",
-    "trees_url": "https://api.github.com/repos/machadaCosta/bachamada/git/trees{/sha}",
-    "statuses_url": "https://api.github.com/repos/machadaCosta/bachamada/statuses/{sha}",
-    "languages_url": "https://api.github.com/repos/machadaCosta/bachamada/languages",
-    "stargazers_url": "https://api.github.com/repos/machadaCosta/bachamada/stargazers",
-    "contributors_url": "https://api.github.com/repos/machadaCosta/bachamada/contributors",
-    "subscribers_url": "https://api.github.com/repos/machadaCosta/bachamada/subscribers",
-    "subscription_url": "https://api.github.com/repos/machadaCosta/bachamada/subscription",
-    "commits_url": "https://api.github.com/repos/machadaCosta/bachamada/commits{/sha}",
-    "git_commits_url": "https://api.github.com/repos/machadaCosta/bachamada/git/commits{/sha}",
-    "comments_url": "https://api.github.com/repos/machadaCosta/bachamada/comments{/number}",
-    "issue_comment_url": "https://api.github.com/repos/machadaCosta/bachamada/issues/comments{/number}",
-    "contents_url": "https://api.github.com/repos/machadaCosta/bachamada/contents/{+path}",
-    "compare_url": "https://api.github.com/repos/machadaCosta/bachamada/compare/{base}...{head}",
-    "merges_url": "https://api.github.com/repos/machadaCosta/bachamada/merges",
-    "archive_url": "https://api.github.com/repos/machadaCosta/bachamada/{archive_format}{/ref}",
-    "downloads_url": "https://api.github.com/repos/machadaCosta/bachamada/downloads",
-    "issues_url": "https://api.github.com/repos/machadaCosta/bachamada/issues{/number}",
-    "pulls_url": "https://api.github.com/repos/machadaCosta/bachamada/pulls{/number}",
-    "milestones_url": "https://api.github.com/repos/machadaCosta/bachamada/milestones{/number}",
-    "notifications_url": "https://api.github.com/repos/machadaCosta/bachamada/notifications{?since,all,participating}",
-    "labels_url": "https://api.github.com/repos/machadaCosta/bachamada/labels{/name}",
-    "releases_url": "https://api.github.com/repos/machadaCosta/bachamada/releases{/id}",
-    "created_at": "2015-07-30T07:08:22Z",
-    "updated_at": "2015-08-07T13:34:41Z",
-    "pushed_at": "2015-10-17T14:27:40Z",
-    "git_url": "git://github.com/machadaCosta/bachamada.git",
-    "ssh_url": "git@github.com:machadaCosta/bachamada.git",
-    "clone_url": "https://github.com/machadaCosta/bachamada.git",
-    "svn_url": "https://github.com/machadaCosta/bachamada",
-    "homepage": null,
-    "size": 2144,
-    "stargazers_count": 1,
-    "watchers_count": 1,
-    "language": "Java",
-    "has_issues": true,
-    "has_downloads": true,
-    "has_wiki": true,
-    "has_pages": false,
-    "forks_count": 0,
-    "mirror_url": null,
-    "open_issues_count": 1,
-    "forks": 0,
-    "open_issues": 1,
-    "watchers": 1,
-    "default_branch": "master"
-    },
-    ...
-    }
-    ]
+        compile "com.squareup.retrofit2:retrofit:$retrofit_version"
+        compile "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+        compile "com.squareup.okhttp3:okhttp:$okhttp_version"
+
+avec :
+
+        ext.retrofit_version = '2.3.0'
+        ext.okhttp_version = '3.9.1'
 
 
-Afin de modéliser un objet répertoire renvoyé par le serveur, il faut créer une classe JAVA représentant l'objet. Par exemple, la classe **_Repo_** :
+Il s'agit aussi d'ajouter la permission internet. Pour plus de détail, consultez
+l'article [Configurer un projet Android pour utiliser Retrofit][Configure].
 
+Dans la suite, nous nous intéressons à réaliser une requête **HTTP GET** et à
+récupérer une liste d'objets au format **JSON** depuis un serveur distant.
 
-    class Repo {
+## Créer la classe Kotlin représentant les données
 
-        final String name;
+Il s'agit de créer la classe _Kotlin_ représentant l'objet à récupérer du serveur.
 
-        public Repo(String name) {
-            this.name = name;
-        }
-    }
+Par exemple, nous souhaitons récupérer une liste de cours, depuis un serveur
+déployé [ici sur heroku](http://mobile-courses-server.herokuapp.com/).
+La requête permettant d'obtenir la liste de cours est _<http://mobile-courses-server.herokuapp.com/courses>._ 
+Avec [Postman][Postman], l'exécution de cette requête renvoie le fichier **JSON** suivant :
 
+```JSON
+[
+  {
+      "id": "c8fabf68-8374-48fe-a7ea-a00ccd07afff",
+      "title": "ABC d'Android",
+      "time": 240,
+      "cover": "http://mobile-courses-server.herokuapp.com/assets/android.png"
+  },
+  {
+      "id": "a460afed-e5e7-4e39-a39d-c885c05db861",
+      "title": "Kotlin pour Android",
+      "module": "Android",
+      "time": 240,
+      "cover": "http://mobile-courses-server.herokuapp.com/assets/android-kotlin.png"
+  },
+  {
+      "id": "fcd1e6fa-a63f-4f75-9da4-b560020b6acc",
+      "title": "Outils du Développeur",
+      "module": "Android",
+      "time": 180,
+      "cover": "http://mobile-courses-server.herokuapp.com/assets/android-config.png"
+  },
+  {
+      "id": "c30968db-cb1d-442e-ad0f-80e37c077f89",
+      "title": "Interface Utilisateur Native",
+      "module": "Android",
+      "time": 240,
+      "cover": "http://mobile-courses-server.herokuapp.com/assets/android-view.png"
+  },
+  {
+      "id": "78ee5f25-b84f-45f7-bf33-6c7b30f1b502",
+      "title": "Interface Utilisateur Interactive",
+      "module": "Android",
+      "time": 240,
+      "cover": "http://mobile-courses-server.herokuapp.com/assets/android-navigation.png"
+  },
+  {
+      "id": "cef179f2-7cbc-41d6-94ca-ecd23d9f7fd6",
+      "title": "Adaptateur de Liste de Données",
+      "module": "Android",
+      "time": 240,
+      "cover": "http://mobile-courses-server.herokuapp.com/assets/android-adapter-list.png"
+  },
+  {
+      "id": "bbcee412-be64-4a0c-bf1e-315977acd924",
+      "title": "Preference Utilisateur",
+      "module": "Android",
+      "time": 240,
+      "cover": "http://mobile-courses-server.herokuapp.com/assets/android-bdd.png"
+  },
+  {
+      "id": "bbcee412-be64-4a0c-bf1e-315977acd924",
+      "title": "Architecture Client Serveur",
+      "module": "BDD Client",
+      "time": 240,
+      "cover": "http://mobile-courses-server.herokuapp.com/assets/bdd-client.png"
+  }
+]
+```
 
-Avec l'attribut de classe _name_ correspondant à un élément de la réponse du serveur.
+Ainsi le serveur, renvoie une liste de cours, contenant chacun :
 
-## Faire la requête HTTP GET
+   - un identifiant (_id_)
+   - un titre (_title_)
+   - un module (_module_)
+   - une durée (_time_)
+   - une image (_cover_)
 
-  1. Créer l'interface JAVA listant les requêtes à réaliser, ici nous déclarons une seule requête HTTP GET, _listRepos_ :
+Afin de modéliser un tel objet, cours, soit _Course_, il faut créer la classe _Kotlin_
+représentant l'objet. Par exemple, la classe `Course` représente un cours, pour
+l'application mobile, selon les données du serveur :
 
+    class Courses(val title: String, val cover: String)
 
-    public interface GitHubService {
-        @GET("/users/{user}/repos")
-        Call<List<Repo>> listRepos(@Path("user") String user);
+Les attributs du constructeur doivent porter les mêmes noms que ceux du fichier **JSON**
+renvoyé par le serveur : _title_ et _cover_. De plus, seulement ces deux attributs
+nous intéresse, c'est pourquoi les autres n'apparaissent pas dans la classe.
+
+## Créer l'interface Kotlin représentant l'API
+
+Il s'agit de créer l'interface _Kotlin_ qui va contenir la déclaration de toutes les
+requêtes disponibles sur le [serveur de cours dont le code source est hébergé sur GitLab][Server].
+Pour le moment, nous avons une seule requêtes **GET**, ne prenant aucun paramètre
+et renvoyant une liste de cours.
+Par exemple, l'interface `CoursesService` représente l'API du serveur de cours :
+
+    interface CoursesService {
+        @GET("/courses")
+        fun listCourses(): Call<List<Course>>
     }
 
+L'annotation `@GET` de [Retrofit 2][Retrofit] indique la déclaration d'une requête **GET**.
+Ensuite, en paramètre, il est placé le chemin de la requête `/courses`.
 
-**Note** : En début de méthode, figure ce qui est attendu du serveur dans un Call, soit une liste de **_Repo_**, _Call<List<Repo>>_. En paramètre de méthode, est placé le(s) paramètre(s) pour la requête, soit l'utilisateur [GitHub](https://api.github.com/).
+La signature de la fonction associé à la requête porte le nom `listCourses`
+(son nom n'a pas d'importance). Elle ne prend pas de paramètre puisque la requête n'en demande pas.
+Et elle renvoie un `Call<...>`, c'est la réponse du serveur, prenant entre chevron
+`List<Course>`, c'est-à-dire la liste de cours renvoyée par le serveur au format **JSON**.
+
+Toutes fonctions associées à une requête, retourne un objet `Call<>`, ensuite
+le paramètre entre chevron varie selon ce que renvoie le serveur (une liste ou un objet)
+et ce que l'on souhaite récupérer. Par ailleurs, si la requête requiert un paramètre
+tel qu'un nom d'utilisateur alors il est spécifié en paramètre de la fonction.
+
+Par exemple pour récupérer la liste des répertoires d'un utilisateur **GitHub**,
+selon leur API, il faudrait coder en _Kotlin_ :
+
+    @GET("/users/{user}/repos")
+    listRepos(@Path("user") user: String): Call<List<Repo>>
+
+## Créer l'instance du client Retrofit
+
+Depuis, une <i style='color:green'>Activity</i> ou bien un
+<i style='color:green'>Fragment</i>, nous allons créer une instance de client _Retrofit_.
+Par exemple, dans un <i style='color:green'>Fragment</i> `NetworkFragment`:
+
+        val retrofit = Retrofit.Builder()
+         .baseUrl(url)
+         .addConverterFactory(MoshiConverterFactory.create())
+         .build()
+
+avec l'url :
+
+        private val url = "http://mobile-courses-server.herokuapp.com/"
+
+les imports concernés sont celui de [_Retrofit 2_][Retrofit]  et de [_Moshi_][Moshi], le convertisseur de **JSON**  :
+
+        import retrofit2.Retrofit
+        import retrofit2.converter.moshi.MoshiConverterFactory
+
+Le client _Retrofit_ est à configurer avec une url de serveur ainsi qu'un
+convertisseur de requête. Ici, il est choisi le convertisseur _Moshi_ car il permet
+de convertir du **JSON** en objet _Kotlin_.
+
+## Créer l'instance du service
+
+Après avoir créé l'instance du client _Retrofit_, à la suite dans `NetworkFragment`, il s'agit de créer
+l'instance du service comme suit :
+
+        val service = retrofit.create(CoursesService::class.java)
+
+et d'importer la classe `CoursesService`.
+
+Ce service est créé à partir du client _Retrofit_, lequel contient l'url du serveur,
+et à partir du `.class` de l'interface, laquelle contient toutes les requêtes possibles
+avec le serveur.
+
+## Créer la requête GET
+
+Toujours à la suite dans `NetworkFragment`, il s'agit de créer la requête **GET** :
+
+        val courseRequest = service.listCourses()
+
+## Exécuter la requête GET
+
+Enfin, il est possible d'exécuter la requête venant d'être créée via la fonction
+<i style='color:#00bfff'>enqueue(object: Callback<...>)</i> de _Retrofit_ :
+
+        courseRequest.enqueue(object : Callback<List<Course>> {
+                    override fun onResponse(call: Call<List<Course>>, response: Response<List<Course>>) {
+                        val allCourse = response.body()
+                        if (allCourse != null) {
+                            info("HERE is ALL COURSES FROM HEROKU SERVER:")
+                            for (c in allCourse)
+                                info(" one course : ${c.title} : ${c.cover} ")
+                        }
+                    }
+                    override fun onFailure(call: Call<List<Course>>, t: Throwable) {
+                        error("KO")
+                    }
+                })
+
+les imports associés sont les suivants :
+
+          import retrofit2.Call
+          import retrofit2.Callback
+          import retrofit2.Response
+
+ainsi que l'import de la classe `Course`.
+
+La fonction <i style='color:#00bfff'>enqueue(object: Callback<...>)</i> prend en
+paramètre l'objet <i style='color:#00bfff'>Callback</i>,
+cet objet intercepte la réponse du serveur.
+Cette dernière est traitée dans la sur-implémentation  des fonctions `onResponse(...)`
+et `onFailure(...)`.
+Les paramètres du <i style='color:#00bfff'>Callback</i> ainsi que des fonctions
+`onResponse(...)` et `onFailure(...)` dépendent directement du type de retour
+de la fonction représentant la requête. Dans notre cas, le type de retour de
+`listCourses()` est `List<Course>` (définit par ce que renvoie le serveur).
+
+Enfin, la liste des cours en contenu dans `response.body()`.
+
+Finalement, dans cet article nous avons vu comment :
+
+- Importer _Retrofit_ et _Moshi_ dans le projet Android
+- Créer la classe _Kotlin_ représentant les données à récupérer du seveur
+- Créer l'interface _Kotlin_ représentant l'API du serveur
+- Créer l'instance du client _Retrofit_ en version 2
+- Créer l'instance du service d'API
+- Créer la requête **GET**
+- Exécuter la requête **GET**
+- Récupérer le fruit de la requête
+
+[Retrofit]: http://square.github.io/retrofit/
+[Okhttp]: http://square.github.io/okhttp/
+[Moshi]: https://github.com/square/retrofit/tree/master/retrofit-converters/moshi
+[Postman]: https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop
+[Server]: https://gitlab.com/chillcoding-at-the-beach/mobile-courses-server
+[Configure]: https://www.chillcoding.com/blog/2015/11/16/configurer-projet-android-pour-retrofit/
