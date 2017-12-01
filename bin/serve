@@ -1,1 +1,15 @@
-bundle install && bundle exec jekyll serve --watch --future --drafts --verbose --incremental --profile --trace
+#!/usr/bin/env ruby
+
+begin
+  system 'bundle install 1> /dev/null'
+  jekyll_pid = spawn(*%w[bundle exec jekyll serve --future --drafts --verbose --incremental --profile --trace --port 4000])
+  puts "Jekyll detached with pid '#{jekyll_pid}'. Run `pkill -f jekyll' or `kill -9 #{jekyll_pid}' to stop Jekyll if not stopped with Ctr-C."
+  system('open http://localhost:4000')
+  loop do
+    sleep 1
+  end
+rescue Interrupt
+  puts "\nThanks for contributing to chillcoding.com!\n"
+ensure
+  Process.kill('TERM', jekyll_pid)
+end
