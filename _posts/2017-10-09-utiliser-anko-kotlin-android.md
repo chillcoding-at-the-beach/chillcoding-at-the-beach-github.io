@@ -40,7 +40,7 @@ mobile _Android_ avec le langage _Kotlin_ !
 
 ## Importer la bibliothèque Anko Commons
 
-1. Placez vous dans dans le fichier _gradle_ du projet `build.gradle (Project: MyProject)`
+1. Placez vous dans le fichier _gradle_ du projet `build.gradle (Project: MyProject)`
 2. Ajoutez une variable contenant la version d'_Anko Commons_ à utiliser :
 
         ext.anko_version = '0.10.0'
