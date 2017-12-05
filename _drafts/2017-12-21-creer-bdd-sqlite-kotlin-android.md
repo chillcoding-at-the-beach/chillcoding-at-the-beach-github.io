@@ -34,6 +34,39 @@ La table est nommé _Score_ et possède 3 champs, c'est-à-dire 3 colonnes :
  * un pseudo, _pseudo_
  * un total, _score_
 
+### Implémenter une classe représentant les données
+
+```
+class Score(val pseudo:String, val score:Int)
+```
+Attention le nom et le type des attributs, de cette classe, doivent correspondre
+exactement à ce que la requette de la BDD renvoie (cf. fonction `requestScores`
+dans `ScoreDb`)
+
+### Implémenter une classe Application pour un projet Android
+
+ Cette classe est instanciée tout au long de l'exécution de l'application.
+
+ avec MyApp la classe Application :
+ ```
+ class MyApp : Application() {
+
+     companion object {
+         lateinit var instance: MyApp
+       }
+
+       override fun onCreate() {
+         super.onCreate()
+         instance = this
+     }
+
+ }
+ ```
+ spécifier dans le fichier Manifest:
+ ```
+ <application
+         android:name=".MyApp"
+ ```
 
 ### Implémenter la classe _SqliteOpenHelper_
 
@@ -78,24 +111,9 @@ avec les imports:
 ```
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
-import com.chillcoding.mycuteheart.MyApp
 import org.jetbrains.anko.db.*
 ```
 
-avec MyApp la classe Application :
-```
-class MyApp : Application() {
-
-    companion object {
-        lateinit var instance: MyApp
-      }
-}
-```
-spécifier dans le fichier Manifest:
-```
-<application
-        android:name=".MyApp"
-```
 
 
 ### Implémenter la classe de gestion de la BDD
