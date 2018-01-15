@@ -16,7 +16,7 @@ le _SDK Android_.
 Notre cas d'étude concerne l'enregistrement des scores pour un jeu. Pour le moment,
 nous commençons par enregistrer seulement le pseudonyme de l'utilisateur avec son score.
 
-### Implémenter une classe représentant les données
+### 1 Implémenter une classe représentant les données
 
 ```
 class Score(val pseudo:String, val score:Int)
@@ -25,7 +25,7 @@ Attention le nom et le type des attributs, de cette classe, doivent correspondre
 exactement à ce que la requette de la BDD renvoie (cf. fonction `requestScores`
 dans `ScoreDb`)
 
-## Définir les tables
+## 2 Définir les tables
 
 Dans notre cas, nous avons une seule table de scores. Il s'agit de créer un objet `ScoreTable`
 la représentant :
@@ -69,17 +69,19 @@ La table est nommé _Score_ et possède 3 champs, c'est-à-dire 3 colonnes :
          android:name=".App"
  ```
 
-### Implémenter la classe _SqliteOpenHelper_
+### 3 Implémenter la classe _SqliteOpenHelper_
 
 Une classe de type  _SqliteOpenHelper_ est une classe permettant de gérer la
 construction de la base de données locale.
 
 
 1. Importez la bibliothèque _Anko SQLite_
+
 ```
-    compile "org.jetbrains.anko:anko-sqlite:$anko_version"
+    implementation "org.jetbrains.anko:anko-sqlite:$anko_version"
 ```
-Créez la classe _Kotlin_ `ScoreDbHelper`, hérite de <i style='color:#00bfff'>ManagedSQLiteOpenHelper</i> :
+
+2. Créez la classe _Kotlin_ `ScoreDbHelper`, hérite de <i style='color:#00bfff'>ManagedSQLiteOpenHelper</i> :
 ```
 class ScoreDbHelper(ctx: Context = MyApp.instance) : ManagedSQLiteOpenHelper(ctx,
         ScoreDbHelper.DB_NAME, null, ScoreDbHelper.DB_VERSION) {
