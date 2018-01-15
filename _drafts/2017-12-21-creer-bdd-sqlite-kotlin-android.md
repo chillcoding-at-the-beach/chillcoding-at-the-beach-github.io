@@ -16,6 +16,15 @@ le _SDK Android_.
 Notre cas d'étude concerne l'enregistrement des scores pour un jeu. Pour le moment,
 nous commençons par enregistrer seulement le pseudonyme de l'utilisateur avec son score.
 
+### Implémenter une classe représentant les données
+
+```
+class Score(val pseudo:String, val score:Int)
+```
+Attention le nom et le type des attributs, de cette classe, doivent correspondre
+exactement à ce que la requette de la BDD renvoie (cf. fonction `requestScores`
+dans `ScoreDb`)
+
 ## Définir les tables
 
 Dans notre cas, nous avons une seule table de scores. Il s'agit de créer un objet `ScoreTable`
@@ -34,14 +43,6 @@ La table est nommé _Score_ et possède 3 champs, c'est-à-dire 3 colonnes :
  * un pseudo, _pseudo_
  * un total, _score_
 
-### Implémenter une classe représentant les données
-
-```
-class Score(val pseudo:String, val score:Int)
-```
-Attention le nom et le type des attributs, de cette classe, doivent correspondre
-exactement à ce que la requette de la BDD renvoie (cf. fonction `requestScores`
-dans `ScoreDb`)
 
 ### Implémenter une classe Application pour un projet Android
 
@@ -49,10 +50,10 @@ dans `ScoreDb`)
 
  avec MyApp la classe Application :
  ```
- class MyApp : Application() {
+ class App : Application() {
 
      companion object {
-         lateinit var instance: MyApp
+         lateinit var instance: App
        }
 
        override fun onCreate() {
@@ -65,7 +66,7 @@ dans `ScoreDb`)
  spécifier dans le fichier Manifest:
  ```
  <application
-         android:name=".MyApp"
+         android:name=".App"
  ```
 
 ### Implémenter la classe _SqliteOpenHelper_
