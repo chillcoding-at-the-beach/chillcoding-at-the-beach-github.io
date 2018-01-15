@@ -119,7 +119,7 @@ import org.jetbrains.anko.db.*
 
 
 
-### Implémenter la classe de gestion de la BDD
+### 4 Implémenter la classe de gestion de la BDD
 
 Cette classe implémente les requêtes SQL.
 cf. RepositoryPattern
@@ -150,7 +150,9 @@ class ScoreDb(private val scoreDbHelper: ScoreDbHelper = ScoreDbHelper.instance)
 }
 ```
 
-### Faire les requêtes depuis l'interface utilisateur
+### 5 Faire les requêtes depuis la classe principale
+Depuis une `Activity` ou un `Fragment`, on introduit et lit la BDD dans un thread différent de l'UIThread via doAsync.
+
 ```
 val scoreDb = ScoreDb()
 
