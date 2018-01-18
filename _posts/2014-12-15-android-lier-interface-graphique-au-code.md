@@ -22,13 +22,11 @@ Note : Ce composant a été introduit dans la version 2.3 d'Android afin d'optim
 
 Chaque **Activity** est associé à un écran, soit une interface graphique, communément appelée une vue (i. e **View**). Concrètement dans le code java, l'**Activity** est attachée à la vue dans la méthode _onCreate()_ de la façon suivante :
 
-
     onCreate(...){
     setContentView(mView);
     ..}
 
 * avec :
-
 
     mView=R.layout.myLayout;
 
@@ -44,7 +42,6 @@ Note : _MaClasseJavaQuiExtendsView_ est une classe java qui étend la classe **V
 ## B] Fragment & View
 
 Chaque **Fragment** peut être associer à une **View**. Concrètement dans le code java, le **Fragment** est attachée à la vue dans la méthode _onCreateView()_ de la façon suivante :
-
 
     onCreateView(...){
     View view = inflater.inflate(mView, container, false);

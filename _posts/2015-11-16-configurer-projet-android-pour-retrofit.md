@@ -14,9 +14,9 @@ sur les dépendances Android permettant de faire des requêtes HTTP (cf.
 [question "What is the best library to make HTTP calls from Java/Android" sur Quora][Quora])
 m'a orienté vers les travaux de Jake Wharton, pour le transfert de données textuelles (hors chargement d'image).
 
+<!--more-->
 
 ## Importer les bibliothèques nécessaires dans Android Studio
-
 
 Il s'agit d'importer [**Retrofit**][Retrofit] développée par [_Square_][Square]. De plus, depuis la version 2 de **Retrofit**, il faut également importer un convertisseur de requête pour le format utilisé, JSON dans notre cas.
 
@@ -31,7 +31,6 @@ Il s'agit d'importer [**Retrofit**][Retrofit] développée par [_Square_][Squar
 
   2. Importer également un convertisseur JSON, soit la bibliothèque _converter-moshi_ (prenez la dernière version indiqué sur le [site github][Moshi]):
           compile "com.squareup.retrofit2:converter-moshi:$retrofit_version"
-
 
 Il existe d'autres convertisseurs, voici la liste proposé par [_Square_][Square] :
 
@@ -48,7 +47,6 @@ Afin de pouvoir exécuter des requêtes HTTP sur un serveur distant, il faut ég
 
   1. Dans le fichier Manifest de votre projet _Android Studio_, ajouter
   la permission internet :
-
 
     <uses-permission android:name="android.permission.INTERNET" />
 

@@ -298,6 +298,7 @@ fun Context.share(text: String, subject: String = ""): Boolean {
 ```
 
 ## Retour d'expérience
+
 Finalement, la bibliothèque _Anko Commons_ offre des fonctions d'extensions
 et autres implémentations _Kotlin_ intéressantes. En particulier, elle permet
 de programmer très rapidement les tâches utilisateurs les plus courantes :
@@ -319,7 +320,7 @@ c'est-à-dire qu'elles peuvent être appelées depuis une <i style='color:green'
 ou bien depuis un <i style='color:green'>Fragment</i>. Leur intégration dans une architecture
 spécifiquement alambiqué n'est alors pas forcément adéquate.
 
-### <i class="fa fa-globe" aria-hiden="true"></i> Références :
+### {% icon fa-globe %} Références :
 
 1. <a name="github"></a>[Anko on GitHub](https://github.com/kotlin/anko)
 2. <a name="ankologger"></a>[AnkoLogger documentation](https://github.com/Kotlin/anko/wiki/Anko-Commons-%E2%80%93-Logging)

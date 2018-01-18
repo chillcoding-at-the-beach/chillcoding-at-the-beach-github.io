@@ -20,6 +20,8 @@ Notre cas d'étude concerne l'enregistrement de cours sur les technologies mobil
 Pour le moment, nous commençons par enregistrer seulement le titre du cours ainsi
 que sa durée.
 
+<!--more-->
+
 ## Implémenter une classe de donnée représentant un cours
 
 1. Il s'agit de créer une nouvelle _data class Kotlin_, nommons la **MobileCourse** :

@@ -68,4 +68,5 @@ Note : la commande **adb** est accessible depuis le script placé dans le dossie
   3. Executer le projet (en cliquant sur la flèche verte)
   4. Choisir de lancer l'app sur la smartwatch detectée
   5. Après quelques instants, l'app _Skeleton Wearable _se lance sur la smartwatch
+
 Finalement, nous avons déployé l'app. _Skeleton Wearable_ sur une smartwatch. Et il est possible de voir les évènements qui s'y passent en ouvrant l'_Android Device Monitor (ADM)._ La prochaine étape est de [Publier une application Android Wear sur le Play Store](/blog/2015/10/14/publier-app-android-wear-playstore/).

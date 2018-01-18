@@ -31,6 +31,8 @@ le _CPU_, ou bien utilisant une bibliothèque _C_.
 Dans la suite, nous nous concentrerons sur le développement d'application _Android_,
 avec le langage _Kotlin_, dans _Android Studio_.
 
+<!--more-->
+
 ## Télécharger Android Studio
 
 1. Allez sur le site de référence Android : [developer.android.com](https://developer.android.com/){:target="_blank"}
@@ -112,8 +114,6 @@ Pour commencer les 3 premières icônes à retenir sont :
   * ![Icône Android Emulateur : le _smartphone_ avec une tête de _droid_](/assets/img/post/android/as-ic-emulator.png) _AVD Manager_ : elle permet de créer, lancer des émulateurs
   * ![Icône Android Téléchargement : une flèche bleu vers le bas avec une tête de _droid_](/assets/img/post/android/as-ic-download.png) _SDK Manager_ : elle permet de télécharger le dernier _SDK Android_
   ou autres
-
-
 
 ### {% icon fa-globe %} Références
 

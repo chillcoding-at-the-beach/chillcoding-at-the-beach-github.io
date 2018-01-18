@@ -35,7 +35,6 @@ For instance, following are different data set depending on the connectivity:
 | **3G** or 4G | Info since 3 days |
 | <i class="fa fa-wifi" aria-hiden="true"></i> Wifi | Info since 15 days |
 
-
 ## {% icon fa-globe %} Resources:
 
 * [Gerardnico, 2016 - Data Transfert by Gerardnico](http://gerardnico.com/wiki/android/data_transfer)

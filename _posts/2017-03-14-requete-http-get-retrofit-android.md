@@ -12,12 +12,13 @@ Ce tutoriel va vous donner les clés pour faire une requête **HTTP GET** au fo
 en _Android_, avec la bibliothèque [_Retrofit V2_][Retrofit],
 sous le langage _Kotlin_.
 
+<!--more-->
+
 ## Importer Retrofit et Moshi dans le projet Android
 
 Tout d’abord, il faut au préalable importer, dans le projet _Android_, la
 dépendance [_Retrofit 2_][Retrofit], ainsi qu'un convertisseur de requête,
 et la bibliothèque [_OkHttp_][Okhttp] afin d'assurer la retro-compatibilité :
-
 
         compile "com.squareup.retrofit2:retrofit:$retrofit_version"
         compile "com.squareup.retrofit2:converter-moshi:$retrofit_version"
@@ -27,7 +28,6 @@ avec :
 
         ext.retrofit_version = '2.3.0'
         ext.okhttp_version = '3.9.1'
-
 
 Il s'agit aussi d'ajouter la permission internet. Pour plus de détail, consultez
 l'article [Configurer un projet Android pour utiliser Retrofit][Configure].
@@ -44,7 +44,7 @@ déployé [ici sur heroku](http://mobile-courses-server.herokuapp.com/).
 La requête permettant d'obtenir la liste de cours est _<http://mobile-courses-server.herokuapp.com/courses>._ 
 Avec [Postman][Postman], l'exécution de cette requête renvoie le fichier **JSON** suivant :
 
-```JSON
+```json
 [
   {
       "id": "c8fabf68-8374-48fe-a7ea-a00ccd07afff",
