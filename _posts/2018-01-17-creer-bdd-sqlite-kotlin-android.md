@@ -218,11 +218,13 @@ on introduit et lit la BDD dans un _thread_ différent de l'_UIThread_ via  <i s
           val list = courseDb.requestScores()
         }
 
-4. Ajoutez un _callBack_, un appel à la fonction _showList()_, dans le <i style='color:#00bfff'>doAsync</i> :
+4. Ajoutez un _callBack_, un appel à la fonction _showList()_, depuis l'<i style='color:#00bfff'>uiThread</i> dans le <i style='color:#00bfff'>doAsync</i> :
 
         doAsync {
           val list = courseDb.requestScores()
-          showList()
+          uiThread {
+            showList()
+          }
         }
 
 5. Déclarez l'interface <i style='color:#00bfff'>AnkoLogger</i> sur votre
@@ -292,7 +294,7 @@ dans un projet _Android_. Elle permet de manipuler des données structurées e
 persistantes avec SQLite (données structurées : relativement volumineuses ; données
 persistantes : subsistantes après l’exécution d’une application). Cela dit, comme
 dit dans le blog [\[3\]](#ankosqlite), cette bibliothèque n'est pas idéale pour les
-performances. En effet, il vaut mieux utiliser l'_ORM Room_[\[6\]](#room) pour un
+performances. En effet, il vaut mieux utiliser l'_ORM Room_[\[7\]](#room) pour un
 projet de grande envergure.
 
 ### {% icon fa-globe %} Références
@@ -301,8 +303,9 @@ projet de grande envergure.
 2. <a name="ankosqlite"></a>[Documentation Anko SQLite ](https://github.com/Kotlin/anko/wiki/Anko-SQLite#using-anko-sqlite-in-your-project)
 3. <a name="ankosqliteblog"></a>[Blog Anko](https://www.kotlindevelopment.com/anko-sqlite-database/)
 4. [Databases on Android with Anko and Kotlin by Antonio Leiva](https://antonioleiva.com/databases-anko-kotlin/)
-5. [Projet Github d'Antonio](https://github.com/antoniolg/Kotlin-for-Android-Developers)
-6. <a name="room"></a>[Android: Room](https://developer.android.com/topic/libraries/architecture/room.html)
+5. [Using Anko to run background tasks by Antonio Leiva](https://antonioleiva.com/anko-background-kotlin-android/)
+6. [Projet Github d'Antonio](https://github.com/antoniolg/Kotlin-for-Android-Developers)
+7. <a name="room"></a>[Android: Room](https://developer.android.com/topic/libraries/architecture/room.html)
 
 *[AS]: Android Studio
 [AK-4]: https://www.chillcoding.com/blog/2017/10/09/utiliser-anko-kotlin-android/
