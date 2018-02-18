@@ -1,7 +1,8 @@
 ---
-title: "Android References"
+title: "Android References [AK 3 D]"
 categories: en coding android
 author: macha
+last_update: 2018-02-18
 ---
 
 <div class="text-center lead" markdown="1">
@@ -33,9 +34,13 @@ As an Android Developer, you have to know all these references.
 
 ## <a name="app"></a>{% icon fa-th %} Applications
 
-<i class="fa fa-th-large" aria-hiden="true"></i> [UI Design for Android](https://play.google.com/store/apps/details?id=com.boopathy.raja.tutorial){:target="_blank"} Don't miss the awesome Wheel demo
+{% icon fa-th-large %} [UI Design for Android](https://play.google.com/store/apps/details?id=com.boopathy.raja.tutorial){:target="_blank"} Don't miss the awesome Wheel demo
 
 {% icon fa-th-large %} [Libraries for Developers](https://play.google.com/store/apps/details?id=com.desarrollodroide.repos){:target="_blank"} Demo and Link to a large amount of libraries
+
+{% icon fa-th-large %} [Fabulous - App of the year](https://play.google.com/store/apps/details?id=co.thefabulous.app){:target="_blank"} Material Design Application
+
+{% icon fa-th-large %} [Keyline pushing](https://play.google.com/store/apps/details?id=com.faizmalkani.keylines){:target="_blank"} Check UI arrangements
 
 {% icon fa-globe %} Want more? Checkout this [list of Android Applications](http://www.techrepublic.com/pictures/gallery-10-android-apps-every-new-mobile-developer-needs-in-their-toolbox/){:target="_blank"}
 
