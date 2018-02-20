@@ -17,15 +17,15 @@ aux éléments des vues _XML_ (cf. [AK-3]).
 De plus, ce tutoriel introduit quelques fonctionnalités astucieuses disponibles
 dans la bibliothèque _Anko Commons_, telles que :
 
-  * [Afficher un message d'erreur](#log)
-  * [Afficher un message rapide](#toast)
-  * [Ouvrir une boîte de dialogue](#alert)
-  * [Lancer un autre écran](#start)
-  * [Lancer une page Internet](#browse)
-  * [Proposer d'envoyer un email](#email)
-  * [Proposer de partager du contenu](#share)
+  * [Afficher un message d'erreur]({{ page.url }}#log)
+  * [Afficher un message rapide]({{ page.url }}#toast)
+  * [Ouvrir une boîte de dialogue]({{ page.url }}#alert)
+  * [Lancer un autre écran]({{ page.url }}#start)
+  * [Lancer une page Internet]({{ page.url }}#browse)
+  * [Proposer d'envoyer un email]({{ page.url }}#email)
+  * [Proposer de partager du contenu]({{ page.url }}#share)
 
-La bibliothèque _Anko_, écrite en _Kotlin_, contient en fait 4 sous bibliothèques [\[1\]](#github) :
+La bibliothèque _Anko_, écrite en _Kotlin_, contient en fait 4 sous bibliothèques [\[1\]]({{ page.url }}#github) :
 
  * _Anko Commons_ : contient des outils pour les développements _Android_ récurrents
  (<i style='color:green'>Intents</i>, <i style='color:green'>Dialogs</i>, <i style='color:green'>Log</i>, etc.)
@@ -78,7 +78,7 @@ Son utilisation est quelque peu fastidieuse. En effet, les méthodes à utiliser
 * le message à afficher dans la console
 
 En revanche, avec l'interface <i style='color:#00bfff'>AnkoLogger</i>, dont l'import
-correspond à `import org.jetbrains.anko.AnkoLogger`, seul un paramètre est nécessaire [\[2\]](#ankologger).
+correspond à `import org.jetbrains.anko.AnkoLogger`, seul un paramètre est nécessaire [\[2\]]({{ page.url }}#ankologger).
 
 Voici un exemple d'utilisation depuis une <i style='color:green'>Activity</i> :
 
@@ -303,12 +303,12 @@ Finalement, la bibliothèque _Anko Commons_ offre des fonctions d'extensions
 et autres implémentations _Kotlin_ intéressantes. En particulier, elle permet
 de programmer très rapidement les tâches utilisateurs les plus courantes :
 
-* [Voir un message rapide](#toast)
-* [Interagir avec une boîte de dialogue](#alert)
-* [Ouvrir un autre écran](#start)
-* [Voir une page Internet](#browse)
-* [Envoyer un email](#email)
-* [Partager du contenu](#share)
+* [Voir un message rapide]({{ page.url }}#toast)
+* [Interagir avec une boîte de dialogue]({{ page.url }}#alert)
+* [Ouvrir un autre écran]({{ page.url }}#start)
+* [Voir une page Internet]({{ page.url }}#browse)
+* [Envoyer un email]({{ page.url }}#email)
+* [Partager du contenu]({{ page.url }}#share)
 
 Cela dit, il est important de savoir ce qu'il y a sous le capot (`Cmd` ou `Ctrl` + clique :)
 afin de connaître l'implémentation effectuée à partir du _SDK Android_. Parfois,
