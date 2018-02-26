@@ -43,45 +43,37 @@ devra être liée à une classe héritant de <b style='color:green'>PreferencesF
 nommé le `xml/` (spécifier _xml_ pour son type).
 2. Ajoutez un fichier _XML_ **settings.xml** dans le dossier venant d'être créé :
 
-```XML
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        </PreferenceScreen>
 
-</PreferenceScreen>
-```
-3. Ajoutez un bouton à bascule, à l'intérieur des balises `<PreferenceScreen >`.
+3. Ajoutez un bouton à bascule, à l'intérieur des balises `<PreferenceScreen>`.
 Il représente le paramètre audio, avec comme clé, `@string/pref_sound` et valeur
 par défaut, `true` :
 
-```XML
-<SwitchPreference
+        <SwitchPreference
         android:defaultValue="true"
         android:key="@string/pref_sound"
         android:title="@string/label_sound" />
-```
+
 4. Ajoutez une nouvelle classe _Kotlin_, **SettingsFragment**, elle hérite de <b style='color:green'>PreferencesFragment</b> :
 
-```Kotlin
-class SettingsFragment : PreferenceFragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-}
-```
+        class SettingsFragment : PreferenceFragment() {
+            override fun onCreate(savedInstanceState: Bundle?) {
+                super.onCreate(savedInstanceState)
+            }
+        }
+
 5. Liez le fichier **settings.xml** à  **SettingsFragment**, via la fonction
 <i style='color:green'>addPreferencesFromResource()</i>, à appeler depuis la méthode
 <i style='color:green'>onCreate()</i> :
 
-```Kotlin
-  addPreferencesFromResource(R.xml.settings)
-```
+        addPreferencesFromResource(R.xml.settings)
 
-5. Chargez la valeur entrée par défaut dans **settings.xml** dans le fichier <b style='color:green'>SharedPreferences</b> de défaut (depuis une
+6. Chargez la valeur entrée par défaut dans **settings.xml** dans le fichier <b style='color:green'>SharedPreferences</b> de défaut (depuis une
 <b style='color:green'>Activity</b> ou un <b style='color:green'>Fragment</b>) :
 
-```Kotlin
-PreferenceManager.setDefaultValues(this, R.xml.settings, false)
-```
+        PreferenceManager.setDefaultValues(this, R.xml.settings, false)
 
 À présent, le fichier <b style='color:green'>SharedPreferences</b> de défaut
 contient un couple de clé, valeur (`@string/pref_sound`, `true`). La valeur
@@ -99,14 +91,12 @@ cela depuis une <b style='color:green'>Activity</b> ou un <b style='color:green'
 1. Récupérez le fichier <b style='color:green'>SharedPreferences</b> de défaut,
 dans une variable `defaultSharedPref` :
 
-```Kotlin
-var defaultSharedPref = PreferenceManager.getDefaultSharedPreferences(this)
-```
+        var defaultSharedPref = PreferenceManager.getDefaultSharedPreferences(this)
+
 2. Récupérez la valeur associée à la clé `@string/pref_sound` :
 
-```Kotlin
-defaultSharedPref.getBoolean(getString(R.string.pref_sound), true)
-```
+        defaultSharedPref.getBoolean(getString(R.string.pref_sound), true)
+
 D'une part, les fichiers de préférences peuvent être ouvert en
 lecture afin d'y récupérer les données préalablement enregistrées. D'autre part,
 ces fichiers peuvent être ouvert en écriture (ou édition).
@@ -120,26 +110,22 @@ de modifier, ajouter ou supprimer des couples de clé, valeur.
 1. Ciblez un fichier de préférence, sans nom, dans un mode privé (seule votre
   application y aura accès) :
 
-```Kotlin
-    var sharedPref = getPreferences(Context.MODE_PRIVATE)
-```
+        var sharedPref = getPreferences(Context.MODE_PRIVATE)
+
 2. Récupérez l'éditeur :
 
-```Kotlin   
-     var editor: SharedPreferences.Editor = sharedPref.edit()
-```
+        var editor: SharedPreferences.Editor = sharedPref.edit()
+
 3. Insérez un nombre :
 
-```Kotlin    
-    editor.putInt(App.PREF_NB, nb)
-```
-avec `App.PREF_NB` une constante de type <b style='color:#00bfff'>String</b>.
+        editor.putInt(App.PREF_NB, nb)
+
+   avec `App.PREF_NB` une constante de type <b style='color:#00bfff'>String</b>.
 
 4. Validez le changement apporté au fichier :
 
-```Kotlin    
-    editor.commit()
-```
+        editor.commit()
+
 Il est également possible de nommer un fichier de préférence :
 
 ```Kotlin
@@ -163,78 +149,71 @@ il est intéressant d'utiliser une classe déléguée _Kotlin_.
 
 1. Ajoutez un fichier _Kotlin_ **DelegatesExt** :
 
-```Kotlin
-object DelegatesExt {
-    fun <T> preference(context: Context, name: String,
+        object DelegatesExt {
+            fun <T> preference(context: Context, name: String,
                        default: T) = Preference(context, name, default)
-
-    fun <T> preference(fragment: Fragment, name: String,
+            fun <T> preference(fragment: Fragment, name: String,
                        default: T) = Preference(fragment, name, default)
-}
-```
-2. Dans ce fichier [\[5\]](#delegates), à la suite, ajoutez la classe avec un type
-réifier `Preference<T>` :
-
-```Kotlin
-class Preference<T>(private var context: Context?, private val name: String,
-                    private val default: T) {
-
-    var myFragment: Fragment? = null
-
-    constructor(fragment: Fragment, name: String, default: T) : this(null, name, default) {
-        myFragment = fragment
-    }
-
-    private val prefs: SharedPreferences by lazy {
-        if (myFragment == null)
-            PreferenceManager.getDefaultSharedPreferences(context)
-        else
-            PreferenceManager.getDefaultSharedPreferences(myFragment!!.activity)
-    }
-
-    operator fun getValue(thisRef: Any?, property: KProperty<*>): T = findPreference(name, default)
-
-    operator fun setValue(thisRef: Any?, property: KProperty<*>, value: T) {
-        putPreference(name, value)
-    }
-
-    @Suppress("UNCHECKED_CAST")
-    private fun findPreference(name: String, default: T): T = with(prefs) {
-        val res: Any = when (default) {
-            is Long -> getLong(name, default)
-            is String -> getString(name, default)
-            is Int -> getInt(name, default)
-            is Boolean -> getBoolean(name, default)
-            is Float -> getFloat(name, default)
-            else -> throw IllegalArgumentException("This type can be saved into Preferences")
         }
-        res as T
-    }
 
-    @SuppressLint("CommitPrefEdits")
-    private fun putPreference(name: String, value: T) = with(prefs.edit()) {
-        when (value) {
-            is Long -> putLong(name, value)
-            is String -> putString(name, value)
-            is Int -> putInt(name, value)
-            is Boolean -> putBoolean(name, value)
-            is Float -> putFloat(name, value)
-            else -> throw IllegalArgumentException("This type can't be saved into Preferences")
-        }.apply()
-    }
-}
-```
+2. Dans ce fichier [\[5\]](#delegates), à la suite, ajoutez la classe avec un type
+réifié `Preference<T>` :
+
+        class Preference<T>(private var context: Context?, private val name: String,
+                    private val default: T) {
+            var myFragment: Fragment? = null
+            constructor(fragment: Fragment, name: String, default: T) : this(null, name, default) {
+                myFragment = fragment
+            }
+
+            private val prefs: SharedPreferences by lazy {
+                if (myFragment == null)
+                    PreferenceManager.getDefaultSharedPreferences(context)
+                else
+                    PreferenceManager.getDefaultSharedPreferences(myFragment!!.activity)
+            }
+
+            operator fun getValue(thisRef: Any?, property: KProperty<*>): T = findPreference(name, default)
+
+            operator fun setValue(thisRef: Any?, property: KProperty<*>, value: T) {
+                putPreference(name, value)
+            }
+
+            @Suppress("UNCHECKED_CAST")
+            private fun findPreference(name: String, default: T): T = with(prefs) {
+                val res: Any = when (default) {
+                    is Long -> getLong(name, default)
+                    is String -> getString(name, default)
+                    is Int -> getInt(name, default)
+                    is Boolean -> getBoolean(name, default)
+                    is Float -> getFloat(name, default)
+                    else -> throw IllegalArgumentException("This type can be saved into Preferences")
+                }
+                res as T
+            }
+
+            @SuppressLint("CommitPrefEdits")
+            private fun putPreference(name: String, value: T) = with(prefs.edit()) {
+                when (value) {
+                    is Long -> putLong(name, value)
+                    is String -> putString(name, value)
+                    is Int -> putInt(name, value)
+                    is Boolean -> putBoolean(name, value)
+                    is Float -> putFloat(name, value)
+                    else -> throw IllegalArgumentException("This type can't be saved into Preferences")
+                }.apply()
+            }
+        }
+
 3. Utilisez cette classe déléguée, depuis une
 <b style='color:green'>Activity</b> ou un <b style='color:green'>Fragment</b>, en déclarant une variable (représentant le nom de l'utilisateur, par exemple) :
 
-```Kotlin
-var userName: String by DelegatesExt.preference(this, App.PREF_NAME, "John")
-```
+        var userName: String by DelegatesExt.preference(this, App.PREF_NAME, "John")
+
 4. Modifiez cette variable `userName`, cela aura pour effet de modifier le fichier <b style='color:green'>SharedPreferences</b> de défaut :
 
-```Kotlin
-userName = "Macha"
-```
+        userName = "Macha"
+
 
 Finalement, cet article présente l'utilisation des fichiers de préférence pour
 des paramètres nécessitant une interface utilisateur ainsi que pour des paramètres
@@ -250,4 +229,4 @@ de défaut depuis une <b style='color:green'>Activity</b> ou un
 3. <a name="keyvalue"></a>[Android Documentation: Save Key-Value Data with SharedPreferences](https://developer.android.com/training/data-storage/shared-preferences.html#ReadSharedPreference)
 4. [Antonio Leiva: DelegatesExt](https://github.com/antoniolg/Kotlin-for-Android-Developers/blob/master/app/src/main/java/com/antonioleiva/weatherapp/extensions/DelegatesExtensions.kt)
 5. <a name="delegates"></a>[DelegatesExt by macha on Gitlab](https://gitlab.com/chillcoding-at-the-beach/kotlin-for-android/blob/master/app/src/main/java/com/chillcoding/kotlin/tool/DelegatesExt.kt)
-[Correction sur GitLab : MR 7 Shared Preferences](https://gitlab.com/chillcoding-at-the-beach/kotlin-for-android/merge_requests/15/commits)
+6. [Correction sur GitLab : MR 7 Shared Preferences](https://gitlab.com/chillcoding-at-the-beach/kotlin-for-android/merge_requests/15/commits)
