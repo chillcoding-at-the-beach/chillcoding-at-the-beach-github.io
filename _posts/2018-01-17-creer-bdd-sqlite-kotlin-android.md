@@ -299,10 +299,12 @@ val courseDb = CourseDb()
 Finalement, cet article présente l'utilisation de la bibliothèque _Anko SQLite_
 dans un projet _Android_. Elle permet de manipuler des données structurées et
 persistantes avec SQLite (données structurées : relativement volumineuses ; données
-persistantes : subsistantes après l’exécution d’une application). Cela dit, comme
-mentionné dans le blog [\[3\]](#ankosqlite), cette bibliothèque n'est pas idéale pour les
-performances. En effet, il vaut mieux utiliser l'_ORM Room_ [\[7\]](#room) pour un
-projet de grande envergure.
+persistantes : subsistantes après l’exécution d’une application). D'ailleurs,
+vous trouverez l'implémentation correspondante sur GitLab [\[8\]](#gitlab).
+
+Cela dit, comme mentionné dans le blog [\[3\]](#ankosqlite), cette bibliothèque
+n'est pas idéale pour les performances. En effet, il vaut mieux utiliser l'_ORM Room_
+[\[7\]](#room) pour un projet de grande envergure.
 
 ### {% icon fa-globe %} Références
 
@@ -313,6 +315,7 @@ projet de grande envergure.
 5. [Using Anko to run background tasks by Antonio Leiva](https://antonioleiva.com/anko-background-kotlin-android/)
 6. [Projet Github d'Antonio](https://github.com/antoniolg/Kotlin-for-Android-Developers)
 7. <a name="room"></a>[Android: Room](https://developer.android.com/topic/libraries/architecture/room.html)
+8. <a name="gitlab"></a>[Correction sur GitLab : MR 8 db](https://gitlab.com/chillcoding-at-the-beach/kotlin-for-android/merge_requests/16/diffs)
 
 *[AS]: Android Studio
 [AK-4]: https://www.chillcoding.com/blog/2017/10/09/utiliser-anko-kotlin-android/
