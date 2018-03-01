@@ -1,5 +1,5 @@
 ---
-title: "Utiliser la bibliothèque Anko dans un projet Android [AK 4]"
+title: "Utiliser la bibliothèque Anko dans un projet Android [AK 4 C]"
 categories: fr coding tutoriel android kotlin
 author: macha
 ---
@@ -45,7 +45,7 @@ mobile _Android_ avec le langage _Kotlin_ !
 
         ext.anko_version = '0.10.0'
 
-3. Placez vous dans dans le fichier _gradle_ du module `build.gradle (Module: app)`
+3. Placez vous dans le fichier _gradle_ du module `build.gradle (Module: app)`
 4. Ajoutez la dépendance _Anko Commons_ dans le bloc approprié `dependencies` :
 
 avec AS 2
