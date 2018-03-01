@@ -27,6 +27,8 @@ sur les technologies mobiles.
 Pour le moment, nous commençons par enregistrer seulement le titre du cours ainsi
 que sa durée.
 
+<!--more-->
+
 ## Implémenter une classe de donnée
 
 Tout d'abord, il s'agit d'implémenter un classe de donnée représentant un cours.
