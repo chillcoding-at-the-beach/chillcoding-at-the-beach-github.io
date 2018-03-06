@@ -24,6 +24,7 @@ L'implémentation ce fait en trois étapes :
   {% icon fa-code %} Implémentation de l'adaptateur relatif au <b style='color:green'>RecyclerView</b>
   {% icon fa-code %} Configuration du <b style='color:green'>RecyclerView</b> dans l’activité principale
 
+<!--more-->
 
 ## Mise en place de l'_Activity_ principale et des données
 
@@ -91,14 +92,16 @@ Il s'agit, à présent, d'implémenter un adaptateur de données pour le composa
 ## Implémentation de l'adaptateur relatif au RecyclerView
 
 1. Déclarez une classe héritant de <b style='color:green'>RecyclerView.Adapter</b>
+
 ```
 class AndroidVersionAdapter(val items: Array<MyAndroidVersion>) : RecyclerView.Adapter<AndroidVersionAdapter.ViewHolder>() {
 
 }
 ```
+
 2. Ajoutez le fichier de la vue représentant une ligne :
+
 ```
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -114,9 +117,10 @@ class AndroidVersionAdapter(val items: Array<MyAndroidVersion>) : RecyclerView.A
         android:layout_height="1dp"
         android:background="@color/colorPrimaryDark" />
 </android.support.constraint.ConstraintLayout>
-
 ```
+
 3. Ajouter dans **AndroidVersionAdapter** la composition :
+
 ```
 class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         fun bindAndroidVersion(androidVersion: MyAndroidVersion) {
@@ -126,20 +130,26 @@ class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         }
     }
 ```
+
 4. Ajoutez les méthodes d'héritage :
 
 la fonction retournant le nombre d'éléments de la liste :
+
 ```
 override fun getItemCount(): Int = items.size
 ```
+
 la fonction retournant la visualisation d'une ligne de la liste :
+
 ```
 override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
   val lineView = LayoutInflater.from(parent.context).inflate(R.layout.item_android_version, parent, false)
   return ViewHolder(lineView)
    }
 ```
+
 la fonction s'occupant de charger les données dans la vue :
+
 ```
 override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindAndroidVersion(items[position])
@@ -150,10 +160,13 @@ override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 ## Configuration du RecyclerView dans l’activité principale
 
 1. Spécifiez <b style='color:green'>LinearLayoutManager</b> pour l'objet `androidVersionRecyclerView` :
+
 ```
 androidVersionRecyclerView.layoutManager = LinearLayoutManager(this)
 ```
+
 2. Spécifiez un adaptateur pour l'objet `androidVersionRecyclerView`:
+
 ```
 androidVersionRecyclerView.adapter = AndroidVersionAdapter(androidVersionArray)
 ```
