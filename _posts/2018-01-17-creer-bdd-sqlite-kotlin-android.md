@@ -1,7 +1,8 @@
 ---
-title: "Créer une base de données locale avec Anko SQLite [AK 9]"
+title: "Créer une base de données locale avec Anko SQLite [AK 8]"
 categories: fr coding tutoriel android kotlin bdd
 author: macha
+last_update: 2018-02-27
 ---
 
 <div class="text-center lead" markdown="1">
@@ -12,19 +13,27 @@ Ce tutoriel explique comment créer une base de données (BDD) locale simple, su
 un appareil _Android_, avec le langage _Kotlin_. La bibliothèque _Anko SQLite_ est
 utilisée pour manipuler la base de données _SQLite_ mise à disposition par
 le _SDK Android_.
-L'intérêt de mettre en place une BDD dans votre application est de pouvoir présenter,
+
+L'intérêt de mettre en place une BDD dans une application est de pouvoir présenter,
 à l'utilisateur, des volumes de données (introduit au préalable dans la BDD)
 alors qu'il n'a pas de connexion internet.
 
-Notre cas d'étude concerne l'enregistrement de cours sur les technologies mobiles.
+Par ailleurs, il est préférable d'utiliser les fichiers de préférences dans le
+cas d'enregistrement d'un jeu de données peu volumineux (cf. [Utiliser les
+fichiers de Préférences dans une application Android [AK 7]][AK-7]).
+
+Le cas d'étude relatif à l'implémentation suivante concerne l'enregistrement de cours
+sur les technologies mobiles.
 Pour le moment, nous commençons par enregistrer seulement le titre du cours ainsi
 que sa durée.
 
 <!--more-->
 
-## Implémenter une classe de donnée représentant un cours
+## Implémenter une classe de donnée
 
-1. Il s'agit de créer une nouvelle _data class Kotlin_, nommons la **MobileCourse** :
+Tout d'abord, il s'agit d'implémenter un classe de donnée représentant un cours.
+
+1. Créez une nouvelle _data class Kotlin_, nommons la **MobileCourse** :
 
 ```kotlin
 data class MobileCourse(val title: String, val time: Int)
@@ -94,12 +103,12 @@ Elle utilise la classe <b style='color:green'>SqliteOpenHelper</b> du _SDK Andro
             val DB_VERSION = 1
         }
 
-Note : Ces variables statiques sont utilisées dans le constructeur codé en 2.
-Il s'agit de _verrouiller_ le nom de la BDD ainsi que son numéro de version.
+   Note : Ces variables statiques sont utilisées dans le constructeur codé en 2.
+   Il s'agit de _verrouiller_ le nom de la BDD ainsi que son numéro de version.
 Ces attributs sont constants, ils restent les mêmes tout au long de l'exécution
 de l'application.
 
-Après avoir renseigné le constructeur de <b style='color:#00bfff'>ManagedSQLiteOpenHelper</b>,
+   Après avoir renseigné le constructeur de <b style='color:#00bfff'>ManagedSQLiteOpenHelper</b>,
 il s'agit à présent d'implémenter ses fonctions membres :
 
    * <i style='color:#00bfff'>onCreate()</i> : se charge de créer les tables de la BDD
@@ -114,13 +123,13 @@ il s'agit à présent d'implémenter ses fonctions membres :
             )
         }
 
-Ici, il s'agit de créer les tables de la BDD, cela via la fonction <i style='color:#00bfff'>createTable()</i> appliquée à l'objet de type
+    Ici, il s'agit de créer les tables de la BDD, cela via la fonction <i style='color:#00bfff'>createTable()</i> appliquée à l'objet de type
 <b style='color:green'>SQLiteDatabase</b>.
-Elle attend, à minima, 3 paramètres :
+    Elle attend, à minima, 3 paramètres :
 
- * le nom de la table
- * un booléen (à `true` car si la table n'existe pas alors la créer)
- * les colonnes de la table, au moins une, une paire avec le nom de la colonne et son type SQL
+   * le nom de la table
+   * un booléen (à `true` car si la table n'existe pas alors la créer)
+   * les colonnes de la table, au moins une, une paire avec le nom de la colonne et son type SQL
 
 5. Implémenter la fonction <i style='color:#00bfff'>onUpgrade()</i> :
 
@@ -150,7 +159,7 @@ import org.jetbrains.anko.db.*
 ## Implémenter la classe de gestion de la BDD
 
 Il s'agit d'implémenter une classe _Db_, plus précisément **CourseDb**, elle
-contient les requêtes SQL, faite à partir d'un _DbHelper_, en particulier
+contient les requêtes SQL, faites à partir d'un _DbHelper_, en particulier
 **CourseDbHelper** (cf. _RepositoryPattern_).
 
 1. Créez la classe _Db_, **CourseDb**, avec un constructeur prenant en paramètre
@@ -158,7 +167,7 @@ un objet de type _DbHelper_ soit **CourseDbHelper** :
 
        class CourseDb(private val dbHelper: CourseDbHelper) { }
 
-2. Dans la classe **CourseDb**, créez une fonction pour récupérer les cours présent dans la BDD :
+2. Dans la classe **CourseDb**, créez une fonction pour récupérer les cours présents dans la BDD :
 
         fun requestCourse() = dbHelper.use {
             select(MobileCourseTable.NAME,
@@ -166,12 +175,12 @@ un objet de type _DbHelper_ soit **CourseDbHelper** :
                     .parseList(classParser<MobileCourse>())
         }
 
-La fonction _requestCourse()_ utilise la fonction <i style='color:#00bfff'>select()</i>
+   La fonction _requestCourse()_ utilise la fonction <i style='color:#00bfff'>select()</i>
 pour récupérer dans la table `MobileCourseTable.NAME` les colonnes `MobileCourseTable.TITLE` et
 `MobileCourseTable.TIME`. Cette dernière renvoie un résultat nécessitant d'être _parsé_ via
 <i style='color:#00bfff'>parseList()</i>, cette dernière prend en paramètre un <i style='color:#00bfff'>rowParser</i> construit de cette façon : `classParser<MobileCourse>()`.
 
-Attention, le nom et le type des attributs de la classe **MobileCourse**
+   Attention, le nom et le type des attributs de la classe **MobileCourse**
 doivent correspondre exactement à ce que la requête de la BDD renvoie : un titre
 de type champs textuel et une durée de type nombre.
 
@@ -183,7 +192,7 @@ de type champs textuel et une durée de type nombre.
                     MobileCourseTable.TIME to course.time)
         }
 
-Elle prend en paramètre un objet de type **MobileCourse** et l'insère dans la BDD
+   Elle prend en paramètre un objet de type **MobileCourse** et l'insère dans la BDD
 via la fonction <i style='color:#00bfff'>insert()</i>.
 
 4. Créez la fonction _saveCourses()_ :
@@ -292,10 +301,12 @@ val courseDb = CourseDb()
 Finalement, cet article présente l'utilisation de la bibliothèque _Anko SQLite_
 dans un projet _Android_. Elle permet de manipuler des données structurées et
 persistantes avec SQLite (données structurées : relativement volumineuses ; données
-persistantes : subsistantes après l’exécution d’une application). Cela dit, comme
-dit dans le blog [\[3\]](#ankosqlite), cette bibliothèque n'est pas idéale pour les
-performances. En effet, il vaut mieux utiliser l'_ORM Room_[\[7\]](#room) pour un
-projet de grande envergure.
+persistantes : subsistantes après l’exécution d’une application). D'ailleurs,
+vous trouverez l'implémentation correspondante sur GitLab [\[8\]](#gitlab).
+
+Cela dit, comme mentionné dans le blog [\[3\]](#ankosqlite), cette bibliothèque
+n'est pas idéale pour les performances. En effet, il vaut mieux utiliser l'_ORM Room_
+[\[7\]](#room) pour un projet de grande envergure.
 
 ### {% icon fa-globe %} Références
 
@@ -306,6 +317,8 @@ projet de grande envergure.
 5. [Using Anko to run background tasks by Antonio Leiva](https://antonioleiva.com/anko-background-kotlin-android/)
 6. [Projet Github d'Antonio](https://github.com/antoniolg/Kotlin-for-Android-Developers)
 7. <a name="room"></a>[Android: Room](https://developer.android.com/topic/libraries/architecture/room.html)
+8. <a name="gitlab"></a>[Correction sur GitLab : MR 8 db](https://gitlab.com/chillcoding-at-the-beach/kotlin-for-android/merge_requests/16/diffs)
 
 *[AS]: Android Studio
 [AK-4]: https://www.chillcoding.com/blog/2017/10/09/utiliser-anko-kotlin-android/
+[AK-7]: https://www.chillcoding.com/blog/2014/10/10/utiliser-fichier-preferences/

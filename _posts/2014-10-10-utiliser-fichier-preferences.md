@@ -34,7 +34,10 @@ Puis, il est élaboré l'écriture dans un fichier de préférence, sans passer 
 une interface utilisateur. Enfin, il est utilisé une classe déléguée _Kotlin_
 afin de simplifier l'utilisation des <b style='color:green'>SharedPreferences</b>.
 
+<!--more-->
+
 ## Ajouter un écran de paramètre
+
 Tout d'abord, il s'agit de créer la vue _XML_ spécifique aux préférences,
 <b style='color:green'>Preferences</b> [\[1\]](#preferences). Ensuite, cette vue
 devra être liée à une classe héritant de <b style='color:green'>PreferencesFragment</b>.

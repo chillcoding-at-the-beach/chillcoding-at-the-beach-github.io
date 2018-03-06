@@ -1,5 +1,5 @@
 ---
-title: "Utiliser les extensions Kotlin pour accéder facilement aux éléments de la vue [AK 3]"
+title: "Utiliser les extensions Kotlin pour accéder facilement aux éléments de la vue [AK 4 A]"
 categories: fr coding tutoriel android kotlin
 author: macha
 last_update: 2018-01-18
@@ -80,16 +80,13 @@ via la variable _myText_, dans le code _Kotlin_
  `myText from activity_main for Activity (Android extensions) TextView`
 5. Remarquez l'import automatique :
 
-    ```Kotlin
-    import kotlinx.android.synthetic.main.activity_main.*
-    ```
+       import kotlinx.android.synthetic.main.activity_main.*
 
 6. Modifiez le texte, via l'attribut <i style='color:green'>text</i>, disponible
 pour tous les objets de type <b style='color:green'>TextView</b> :
 
-```
-myText.text = "Hello Kotlin :)"
-```   
+       myText.text = "Hello Kotlin :)"
+
 
 Enfin, après exécution du projet, vous devriez voir s'afficher à l'écran _Hello Kotlin :)_ !
 
